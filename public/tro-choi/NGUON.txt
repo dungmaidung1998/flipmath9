@@ -1,0 +1,138 @@
+Nguồn hình minh họa — FlipMath9
+Ngày tạo: 24/11/2026
+Công cụ: OpenAI ImageGen tích hợp.
+Định dạng WebP. Dung lượng tính bằng byte.
+
+ban/C1-1.webp | 320×320 | 13,722 B | ImageGen
+ban/C1-2.webp | 320×320 | 17,008 B | ImageGen
+ban/C1-3.webp | 320×320 | 15,052 B | ImageGen
+ban/C1-4.webp | 320×320 | 13,078 B | ImageGen
+ban/C2-1.webp | 320×320 | 15,566 B | ImageGen
+ban/C2-2.webp | 320×320 | 13,472 B | ImageGen
+ban/C2-3.webp | 320×320 | 11,226 B | ImageGen
+ban/C2-4.webp | 320×320 | 14,856 B | ImageGen
+ban/C3-1.webp | 320×320 | 14,496 B | ImageGen
+ban/C3-2.webp | 320×320 | 11,424 B | ImageGen
+ban/C3-3.webp | 320×320 | 12,246 B | ImageGen
+ban/C3-4.webp | 320×320 | 15,054 B | ImageGen
+ban/C4-1.webp | 320×320 | 17,878 B | ImageGen
+ban/C4-2.webp | 320×320 | 17,704 B | ImageGen
+ban/C4-3.webp | 320×320 | 17,606 B | ImageGen
+ban/C4-4.webp | 320×320 | 14,354 B | ImageGen
+ban/C5-1.webp | 320×320 | 10,202 B | ImageGen
+ban/C5-2.webp | 320×320 | 11,420 B | ImageGen
+ban/C5-3.webp | 320×320 | 10,218 B | ImageGen
+ban/C5-4.webp | 320×320 | 10,162 B | ImageGen
+ban/C6-1.webp | 320×320 | 20,000 B | ImageGen
+ban/C6-2.webp | 320×320 | 16,058 B | ImageGen
+ban/C6-3.webp | 320×320 | 16,920 B | ImageGen
+ban/C6-4.webp | 320×320 | 14,996 B | ImageGen
+ban/C7-1.webp | 320×320 | 19,690 B | ImageGen
+ban/C7-2.webp | 320×320 | 17,190 B | ImageGen
+ban/C7-3.webp | 320×320 | 16,822 B | ImageGen
+ban/C7-4.webp | 320×320 | 23,796 B | ImageGen
+ban/C8-1.webp | 320×320 | 15,034 B | ImageGen
+ban/C8-2.webp | 320×320 | 14,140 B | ImageGen
+ban/C8-3.webp | 320×320 | 18,946 B | ImageGen
+ban/C8-4.webp | 320×320 | 12,596 B | ImageGen
+ban/C9-1.webp | 320×320 | 14,380 B | ImageGen
+ban/C9-2.webp | 320×320 | 15,628 B | ImageGen
+ban/C9-3.webp | 320×320 | 15,060 B | ImageGen
+ban/C9-4.webp | 320×320 | 15,322 B | ImageGen
+ban/C10-1.webp | 320×320 | 13,152 B | ImageGen
+ban/C10-2.webp | 320×320 | 13,644 B | ImageGen
+ban/C10-3.webp | 320×320 | 12,848 B | ImageGen
+ban/C10-4.webp | 320×320 | 11,988 B | ImageGen
+the/C1.webp | 240×300 | 10,582 B | ImageGen
+the/C2.webp | 240×300 | 9,102 B | ImageGen
+the/C3.webp | 240×300 | 12,150 B | ImageGen
+the/C4.webp | 240×300 | 13,654 B | ImageGen
+the/C5.webp | 240×300 | 14,302 B | ImageGen
+the/C6.webp | 240×300 | 12,844 B | ImageGen
+the/C7.webp | 240×300 | 11,304 B | ImageGen
+the/C8.webp | 240×300 | 12,296 B | ImageGen
+the/C9.webp | 240×300 | 14,964 B | ImageGen
+the/C10.webp | 240×300 | 11,476 B | ImageGen
+gio/C1.webp | 160×160 | 9,852 B | ImageGen
+gio/C2.webp | 160×160 | 7,980 B | ImageGen
+gio/C3.webp | 160×160 | 7,222 B | ImageGen
+gio/C4.webp | 160×160 | 7,860 B | ImageGen
+gio/C5.webp | 160×160 | 8,564 B | ImageGen
+gio/C6.webp | 160×160 | 10,134 B | ImageGen
+gio/C7.webp | 160×160 | 7,428 B | ImageGen
+gio/C8.webp | 160×160 | 10,464 B | ImageGen
+gio/C9.webp | 160×160 | 6,466 B | ImageGen
+gio/C10.webp | 160×160 | 6,894 B | ImageGen
+
+Prompt ImageGen (tiếng Anh)
+
+A · Ghép phần chung sau với mô tả từng tệp.
+
+A single centered front-facing game target, square composition. Soft rounded Fluent Emoji 3D-like rendering, soft top-left light, vibrant but balanced colors, subtle internal shading, isolated on true transparent alpha with no floor or drop shadow outside the object. The middle must be a smooth solid uninterrupted surface for a math label, spanning at least 60% of the object's width: put all ribs, veins, markings, and stronger highlights toward edges or top, keep the center nearly uniform and opaque. Wide rounded silhouette, object fills the square, full object visible, no letters, no numerals, no marks resembling text, no logos, no background scenery.
+
+ban/C1-1.webp | One whole ripe Vietnamese orange with dimpled orange skin and a small green leaf.
+ban/C1-2.webp | One whole ripe Vietnamese mango with golden yellow skin, a little green stem and leaf.
+ban/C1-3.webp | One whole Vietnamese red dragon fruit with rosy magenta skin and restrained green tipped bracts confined to outer silhouette.
+ban/C1-4.webp | One whole ripe Vietnamese mangosteen, deep plum colored round fruit with green leafy crown.
+ban/C2-1.webp | A squat wide vintage Vietnamese market scale weight of reddish hammered copper, flat rectangular front face with softly rounded corners and small closed carrying ring at top; no engraved weight or numerals.
+ban/C2-2.webp | A squat wide vintage Vietnamese market scale weight of cool brushed silver steel, flat rectangular front face with softly rounded corners and small closed carrying ring at top; no engraved weight or numerals.
+ban/C2-3.webp | A squat wide vintage Vietnamese market scale weight of matte charcoal cast iron, flat rectangular front face with softly rounded corners and small closed carrying ring at top; no engraved weight or numerals.
+ban/C2-4.webp | A squat wide vintage Vietnamese market scale weight of polished warm brass, flat rectangular front face with softly rounded corners and small closed carrying ring at top; no engraved weight or numerals.
+ban/C3-1.webp | A squat rough-cut Non Nước marble block, milky white, wide smoothly polished flat front rectangular plane and a subdued sliver of rough natural stone along the edges.
+ban/C3-2.webp | A squat rough-cut Non Nước marble block, soft blush pink, wide smoothly polished flat front rectangular plane and a subdued sliver of rough natural stone along the edges.
+ban/C3-3.webp | A squat rough-cut Non Nước marble block, muted blue gray, wide smoothly polished flat front rectangular plane and a subdued sliver of rough natural stone along the edges.
+ban/C3-4.webp | A squat rough-cut Non Nước marble block, pale honey yellow, wide smoothly polished flat front rectangular plane and a subdued sliver of rough natural stone along the edges.
+ban/C4-1.webp | A compact Bà Nà gondola cable car in red, one large flat single dark tinted panoramic window occupying the center, small suspension arm and short thin silver horizontal cable above, no reflections across center.
+ban/C4-2.webp | A compact Bà Nà gondola cable car in royal blue, one large flat single dark tinted panoramic window occupying the center, small suspension arm and short thin silver horizontal cable above, no reflections across center.
+ban/C4-3.webp | A compact Bà Nà gondola cable car in golden yellow, one large flat single dark tinted panoramic window occupying the center, small suspension arm and short thin silver horizontal cable above, no reflections across center.
+ban/C4-4.webp | A compact Bà Nà gondola cable car in leaf green, one large flat single dark tinted panoramic window occupying the center, small suspension arm and short thin silver horizontal cable above, no reflections across center.
+ban/C5-1.webp | Raspberry red glossy latex amusement park balloon with a short thin curling string.
+ban/C5-2.webp | Cobalt blue glossy latex amusement park balloon with a short thin curling string.
+ban/C5-3.webp | Golden yellow glossy latex amusement park balloon with a short thin curling string.
+ban/C5-4.webp | Emerald green glossy latex amusement park balloon with a short thin curling string.
+ban/C6-1.webp | Golden luminous dragon pearl inspired by Da Nang Dragon Bridge, faint ring of dragon-shaped scales near perimeter.
+ban/C6-2.webp | Fire-orange luminous dragon pearl inspired by Da Nang Dragon Bridge, faint ring of dragon-shaped scales near perimeter.
+ban/C6-3.webp | Jade green luminous dragon pearl inspired by Da Nang Dragon Bridge, faint ring of dragon-shaped scales near perimeter.
+ban/C6-4.webp | Crimson luminous dragon pearl inspired by Da Nang Dragon Bridge, faint ring of dragon-shaped scales near perimeter.
+ban/C7-1.webp | A rounded filled circular glossy sea bubble and floating beach toy medallion in safety orange, thick glossy inflated rim and a fully closed solid opaque smooth colored center, no hole, no rings across the center.
+ban/C7-2.webp | A rounded filled circular glossy sea bubble and floating beach toy medallion in ocean blue, thick glossy inflated rim and a fully closed solid opaque smooth colored center, no hole, no rings across the center.
+ban/C7-3.webp | A rounded filled circular glossy sea bubble and floating beach toy medallion in coral pink, thick glossy inflated rim and a fully closed solid opaque smooth colored center, no hole, no rings across the center.
+ban/C7-4.webp | A rounded filled circular glossy sea bubble and floating beach toy medallion in marigold yellow, thick glossy inflated rim and a fully closed solid opaque smooth colored center, no hole, no rings across the center.
+ban/C8-1.webp | One Sơn Trà wild fruit target: round Vietnamese fig fruit (sung), greenish burgundy with one green leaf; with center simple, keep leaves to sides or top.
+ban/C8-2.webp | One Sơn Trà wild fruit target: whole Vietnamese elephant ear fig (vả), plump light green round fig and a small lobed leaf; with center simple, keep leaves to sides or top.
+ban/C8-3.webp | One Sơn Trà wild fruit target: cluster of round red wild berries with one dominant round berry at center and slightly smaller fruit around perimeter, small greens at top; with center simple, keep leaves to sides or top.
+ban/C8-4.webp | One Sơn Trà wild fruit target: one green to reddish oval tropical almond fruit (bàng) with small broad dark green leaf; with center simple, keep leaves to sides or top.
+ban/C9-1.webp | Ruby red traditional Hội An bamboo-ribbed silk lantern with a tassel, lit from inside.
+ban/C9-2.webp | Warm gold traditional Hội An bamboo-ribbed silk lantern with a tassel, lit from inside.
+ban/C9-3.webp | Tangerine orange traditional Hội An bamboo-ribbed silk lantern with a tassel, lit from inside.
+ban/C9-4.webp | Purple traditional Hội An bamboo-ribbed silk lantern with a tassel, lit from inside.
+ban/C10-1.webp | Ancient Central Vietnamese Cham pottery jar, oxide-red terracotta, wide belly with simple smooth flat visual center, traditional impressed Cham pottery bands of modest geometric marks along rim and low foot only, no writing.
+ban/C10-2.webp | Ancient Central Vietnamese Cham pottery jar, warm ochre brown terracotta, wide belly with simple smooth flat visual center, traditional impressed Cham pottery bands of modest geometric marks along rim and low foot only, no writing.
+ban/C10-3.webp | Ancient Central Vietnamese Cham pottery jar, neutral sandstone gray ceramic, wide belly with simple smooth flat visual center, traditional impressed Cham pottery bands of modest geometric marks along rim and low foot only, no writing.
+ban/C10-4.webp | Ancient Central Vietnamese Cham pottery jar, dark charcoal burnished clay, wide belly with simple smooth flat visual center, traditional impressed Cham pottery bands of modest geometric marks along rim and low foot only, no writing.
+
+B · Prompt theo tệp
+
+the/C1.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #97421b as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting woven market basket. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C2.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #9e382c as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting traditional two-pan market balance. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C3.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #376960 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting carved Non Nước stone sculpture. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C4.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #255f3d as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting Bà Nà cable car gondola. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C5.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #943c84 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting Sun Wheel Ferris wheel. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C6.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #8a5c00 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting head of the golden dragon from Đà Nẵng Dragon Bridge. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C7.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #126a95 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting seashell with a wave. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C8.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #3f6525 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting red-shanked douc with rust red legs, gray body, pale whiskers and long tail. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C9.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #845108 as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting two moss-covered stone hands lifting the Golden Bridge. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+the/C10.webp | Portrait 4:5, full-bleed card back for a Vietnamese Grade 9 memory-card game. Sophisticated soft rounded Fluent Emoji 3D artwork, softly lit from upper left. The entire symmetrical design uses #813c2f as the dominant panel base hue with related tonal highlight shades, a softly beveled rounded-corner frame inside the rectangle, a subtle orderly repeating tone-on-tone decorative pattern around the field, and one large clear spatially centered 3D emblem depicting Cham brick temple tower. Keep the icon separated from the decorative border and make the emblem legible at thumbnail size. Consistent single-card composition, full bleed, no hands, no mockup scene, no letters, no numerals, no logos.
+
+C · Prompt theo tệp
+
+gio/C1.webp | One centered empty woven Vietnamese bamboo market shopping basket with handle. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C2.webp | One centered empty shallow round bamboo winnowing tray at a Vietnamese market stall. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C3.webp | One centered empty construction wheelbarrow for stone blocks. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C4.webp | One centered small empty Bà Nà cable car gondola with open front. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C5.webp | One centered empty Sun Wheel Ferris wheel passenger pod. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C6.webp | One centered golden Dragon Bridge themed dragon pearl nest with empty center. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C7.webp | One centered empty colorful sand bucket with a handle. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C8.webp | One centered empty woven forest-fruit basket. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C9.webp | One centered empty wooden crate for bricks and building supplies. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.
+gio/C10.webp | One centered empty Cham museum glass display case with wood base, subtle glass edges and visible empty interior. Square composition, rounded soft Fluent Emoji 3D rendering, subdued warm upper-left light, realistic recognizable materials, slight elevated front view to clearly show opening for a sorting game. Full object visible with no objects inside and no text, numbers, logos, floor, scenery or external shadow. True transparent alpha outside the isolated object.

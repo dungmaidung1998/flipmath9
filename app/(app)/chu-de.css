@@ -1,0 +1,1085 @@
+/* ==========================================================================
+   CHỦ ĐỀ ĐỒNG BỘ 10 CHƯƠNG (ĐỢT 1 – 4)
+   Màu sắc chương dùng qua biến CSS --mau-chuong, bảo đảm đọc rõ và không tràn ngang ở 375px.
+   ========================================================================== */
+
+/* ---------- 1. Đầu trang theo chương + tranh bối cảnh có lớp phủ đọc chữ ---------- */
+.dau-trang--chuong {
+  background:
+    radial-gradient(circle at 86% 18%, color-mix(in srgb, var(--mau-chuong) 22%, #fff) 0 26%, transparent 55%),
+    linear-gradient(150deg, color-mix(in srgb, var(--mau-chuong) 18%, #fff), color-mix(in srgb, var(--mau-chuong) 7%, #fff));
+  border: 2px solid color-mix(in srgb, var(--mau-chuong) 36%, #fff);
+  box-shadow: 0 10px 26px -14px color-mix(in srgb, var(--mau-chuong) 45%, transparent);
+  min-height: 178px;
+}
+
+.dau-trang--chuong h1 {
+  color: color-mix(in srgb, var(--mau-chuong) 72%, #111827);
+  text-shadow: 0 2px 0 #ffffffd9, 0 0 14px #ffffffcc;
+}
+
+.dau-trang--chuong .sub {
+  color: color-mix(in srgb, var(--mau-chuong) 55%, #1e293b);
+  opacity: 0.96;
+}
+
+.dau-trang__nen {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 72% center;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.dau-trang__phu-nen {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    #fffffff0 0%,
+    #ffffffdb 40%,
+    #ffffff78 65%,
+    #ffffff1c 86%,
+    transparent 100%
+  );
+}
+
+.dau-trang--chuong .dau-trang__chu,
+.dau-trang--chuong .dau-trang__hinh {
+  position: relative;
+  z-index: 3;
+}
+
+.dau-trang--chuong .dau-trang__may,
+.dau-trang--chuong .dau-trang__mat-troi {
+  opacity: 0.55;
+}
+
+.dau-trang--chuong .dau-trang__doi path:first-child {
+  fill: color-mix(in srgb, var(--mau-chuong) 20%, #fff);
+}
+
+.dau-trang--chuong .dau-trang__doi path:last-child {
+  fill: color-mix(in srgb, var(--mau-chuong) 34%, #fff);
+}
+
+.dau-trang--chuong:has(.dau-trang__nen) .dau-trang__may,
+.dau-trang--chuong:has(.dau-trang__nen) .dau-trang__mat-troi,
+.dau-trang--chuong:has(.dau-trang__nen) .dau-trang__doi {
+  display: none;
+}
+
+.dau-trang__dia-danh {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 8px;
+}
+
+.dau-trang__dia-danh > span,
+.chuong-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 800;
+  line-height: 1.35;
+  background: #ffffffeb;
+  color: color-mix(in srgb, var(--mau-chuong, var(--ch, #2b4ba8)) 82%, #111827);
+  border: 1.5px solid color-mix(in srgb, var(--mau-chuong, var(--ch, #2b4ba8)) 38%, #fff);
+}
+
+.dau-trang__dia-danh > span:last-child {
+  background: var(--mau-chuong, #2b4ba8);
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (max-width: 560px) {
+  .dau-trang--chuong {
+    min-height: 150px;
+  }
+  .dau-trang__phu-nen {
+    background: linear-gradient(
+      180deg,
+      #fffffff0 0%,
+      #ffffffcf 62%,
+      #ffffff66 100%
+    );
+  }
+}
+
+/* ---------- 2. Khung trang theo màu chương ---------- */
+.trang-chuong {
+  --cd-vien: color-mix(in srgb, var(--mau-chuong, var(--navy)) 34%, #fff);
+  --cd-nen: color-mix(in srgb, var(--mau-chuong, var(--navy)) 9%, #fff);
+  --cd-chu: color-mix(in srgb, var(--mau-chuong, var(--navy)) 82%, #111827);
+}
+
+.trang-chuong .card {
+  border-color: var(--cd-vien);
+}
+
+.trang-chuong .card h2,
+.trang-chuong .chapter-heading,
+.trang-chuong .chuong-ve a {
+  color: var(--cd-chu);
+}
+
+.trang-chuong .action-link {
+  border-color: var(--cd-vien);
+  color: var(--cd-chu);
+  background: var(--cd-nen);
+}
+
+.trang-chuong .action-link:hover {
+  border-color: var(--mau-chuong, var(--navy));
+  background: color-mix(in srgb, var(--mau-chuong, var(--navy)) 16%, #fff);
+}
+
+.trang-chuong button.primary,
+.trang-chuong .btnlink {
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--mau-chuong, var(--navy)) 82%, #fff),
+    var(--mau-chuong, var(--navy))
+  );
+  border-color: color-mix(in srgb, var(--mau-chuong, var(--navy)) 72%, #000);
+  color: #fff;
+}
+
+.trang-chuong button.primary::before {
+  filter: brightness(0) invert(1);
+}
+
+.trang-chuong .rule {
+  border-left-color: var(--mau-chuong, var(--navy));
+  background: var(--cd-nen);
+}
+
+.trang-chuong .lc-thanh i {
+  background: var(--mau-chuong, var(--navy));
+}
+
+.trang-chuong .lc-bai {
+  border-color: var(--cd-vien);
+}
+
+.trang-chuong .lc-bai__dem {
+  background: var(--cd-nen);
+  color: var(--cd-chu);
+}
+
+.trang-chuong .lc-muc a:hover,
+.trang-chuong .muc-ds__dong:hover {
+  border-color: var(--mau-chuong, var(--navy));
+  background: var(--cd-nen);
+}
+
+/* Màn LearningScreen mang màu chương */
+.learning-screen--chuong > header {
+  background: color-mix(in srgb, var(--mau-chuong) 10%, #fff);
+  border-bottom: 2px solid color-mix(in srgb, var(--mau-chuong) 30%, #fff);
+}
+
+.learning-screen__dia-danh {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: color-mix(in srgb, var(--mau-chuong) 16%, #fff);
+  color: color-mix(in srgb, var(--mau-chuong) 82%, #111827);
+}
+
+/* ---------- 3. PreClassStepper — Con đường chủ đề ---------- */
+.stepper-nav-bar--chu-de {
+  border: 2px solid color-mix(in srgb, var(--mau-chuong) 34%, #fff);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--mau-chuong) 7%, #fff), #fff);
+  border-radius: 18px;
+  padding: 14px 16px;
+}
+
+.stepper-chu-de__dau {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px dashed color-mix(in srgb, var(--mau-chuong) 28%, #fff);
+}
+
+.stepper-chu-de__hinh {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex: none;
+  filter: drop-shadow(0 3px 6px #0000001f);
+}
+
+.stepper-chu-de__chu {
+  display: grid;
+  gap: 2px;
+  min-width: 0;
+  flex: 1;
+}
+
+.stepper-chu-de__chu strong {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--mau-chuong) 82%, #111827);
+}
+
+.stepper-chu-de__chu small {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.stepper-chu-de__dem {
+  flex: none;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12.5px;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--mau-chuong) 14%, #fff);
+  color: color-mix(in srgb, var(--mau-chuong) 84%, #111827);
+  white-space: nowrap;
+}
+
+.stepper-nav-bar--chu-de .stepper-nav-track {
+  top: 18px;
+  bottom: auto;
+  left: 32px;
+  right: 32px;
+}
+
+.stepper-nav-bar--chu-de .stepper-nav-btn .stepper-nav-circle {
+  border-color: color-mix(in srgb, var(--mau-chuong) 38%, #fff);
+  background: #fff;
+}
+
+.stepper-nav-bar--chu-de .stepper-nav-btn.active .stepper-nav-circle {
+  background: var(--mau-chuong);
+  border-color: var(--mau-chuong);
+  color: #fff;
+  outline: 3px solid color-mix(in srgb, var(--mau-chuong) 35%, transparent);
+}
+
+.stepper-nav-bar--chu-de .stepper-nav-btn.completed .stepper-nav-circle {
+  background: color-mix(in srgb, var(--mau-chuong) 18%, #fff);
+  border-color: var(--mau-chuong);
+  color: color-mix(in srgb, var(--mau-chuong) 85%, #111827);
+}
+
+@media (max-width: 640px) {
+  .stepper-nav-bar--chu-de {
+    padding: 10px 10px 12px;
+  }
+  .stepper-nav-bar--chu-de .stepper-nav-track {
+    top: 15px;
+    left: 24px;
+    right: 24px;
+    bottom: auto;
+  }
+  .stepper-chu-de__hinh {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* ---------- 4. Thanh câu hỏi & hiệu ứng đơn vị tiến bộ bay vào ---------- */
+.cau-duong__muc-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  border: 1.5px solid color-mix(in srgb, var(--mau-chuong, var(--navy)) 28%, #fff);
+  background: color-mix(in srgb, var(--mau-chuong, var(--navy)) 7%, #fff);
+  font-size: 13px;
+}
+
+.cau-duong__muc-bar img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex: none;
+}
+
+.cau-duong__muc-bar strong {
+  color: color-mix(in srgb, var(--mau-chuong, var(--navy)) 82%, #111827);
+  min-width: 0;
+}
+
+.cau-duong__muc-bar small {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.bay-don-vi {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 16%, #fff);
+  border: 2px solid var(--mau-chuong, #2b4ba8);
+  color: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 85%, #111827);
+  font-weight: 800;
+  font-size: 13.5px;
+  box-shadow: 0 6px 14px color-mix(in srgb, var(--mau-chuong, #2b4ba8) 25%, transparent);
+  animation: bay-don-vi-vao 1.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes bay-don-vi-vao {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.85);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0) scale(1.06);
+  }
+  75% {
+    opacity: 1;
+    transform: translateY(-6px) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-18px) scale(0.95);
+  }
+}
+
+/* ---------- 5. Màn hoàn thành + pháo giấy màu chương + phần thưởng ---------- */
+.lc-hoan-thanh {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, var(--line)) 42%, #fff);
+  background: linear-gradient(
+    180deg,
+    color-mix(in srgb, var(--mau-chuong, #2b4ba8) 9%, #fff),
+    #ffffff 55%
+  );
+}
+
+.lc-thuong {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 10px auto 16px;
+  padding: 14px;
+  border-radius: 18px;
+  background: #ffffffd9;
+  border: 1.5px solid color-mix(in srgb, var(--mau-chuong, #2b4ba8) 32%, #fff);
+  max-width: 440px;
+}
+
+.lc-thuong__hang {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  max-width: 100%;
+}
+
+.lc-thuong__anh {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 10px #00000024);
+  animation: dt-nhun 3.2s ease-in-out infinite;
+}
+
+.lc-thuong__nv {
+  width: 68px;
+  height: 102px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px #0000001f);
+}
+
+@media (max-width: 390px) {
+  .lc-thuong__nv--phu {
+    display: none;
+  }
+}
+
+.lc-thuong__nhan {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 14%, #fff);
+  color: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 85%, #111827);
+  font-weight: 800;
+  font-size: 13.5px;
+}
+
+.lc-phao {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.lc-phao i {
+  position: absolute;
+  top: -12px;
+  width: 8px;
+  height: 12px;
+  border-radius: 2px;
+  opacity: 0.85;
+  animation: lc-phao-roi 2.6s ease-in infinite;
+}
+
+@keyframes lc-phao-roi {
+  0% {
+    transform: translate(0, -10px) rotate(0deg);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(var(--dx, 10px), 260px) rotate(320deg);
+    opacity: 0;
+  }
+}
+
+/* ---------- 6. Nhân vật theo màu chương ---------- */
+.nhan-vat--chuong .nhan-vat__loi {
+  border-color: color-mix(in srgb, var(--mau-chuong) 45%, #fff) !important;
+  background: linear-gradient(135deg, #fff, color-mix(in srgb, var(--mau-chuong) 10%, #fff)) !important;
+  box-shadow: 0 6px 16px -10px var(--mau-chuong) !important;
+}
+
+.nhan-vat--chuong .nhan-vat__loi::after {
+  background: color-mix(in srgb, var(--mau-chuong) 7%, #fff) !important;
+  border-color: color-mix(in srgb, var(--mau-chuong) 45%, #fff) !important;
+}
+
+.nhan-vat--chuong .nhan-vat__loi strong {
+  background: var(--mau-chuong) !important;
+}
+
+/* ---------- 7. Danh sách bài trong chương & huy hiệu LTC/OTC ---------- */
+.bai-the-chuong {
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, var(--line)) 32%, #fff);
+  border-top: 5px solid var(--mau-chuong, var(--navy));
+}
+
+.muc-ds__dong--on-tap {
+  border-color: color-mix(in srgb, var(--mau-chuong, var(--navy)) 46%, #fff);
+  background: color-mix(in srgb, var(--mau-chuong, var(--navy)) 7%, #fff);
+}
+
+.muc-huy-hieu {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  width: fit-content;
+  margin-top: 2px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 15%, #fff);
+  color: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 84%, #111827);
+  border: 1px solid color-mix(in srgb, var(--mau-chuong, #2b4ba8) 38%, #fff);
+}
+
+.muc-huy-hieu--otc {
+  background: linear-gradient(135deg, #fff6cf, #ffe28a);
+  color: #6b4400;
+  border-color: #eab308;
+}
+
+/* ---------- 8. Đợt 2: Bản đồ Đà Nẵng banner tranh + huy hiệu chương ---------- */
+.dn-banner--tranh {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong) 45%, #fff);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--mau-chuong) 14%, #fff), #fff);
+}
+
+.dn-banner--tranh > div,
+.dn-banner--tranh > .dn-banner__chu-de {
+  position: relative;
+  z-index: 3;
+}
+
+.dn-banner--tranh > .dau-trang__nen {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 1 !important;
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  aspect-ratio: auto !important;
+  object-fit: cover !important;
+}
+
+.dn-banner--tranh > .dn-banner__chu-de {
+  background: #ffffffd6 !important;
+}
+
+.dn-banner--tranh .dau-trang__phu-nen {
+  background: linear-gradient(90deg, #ffffffed 0%, #ffffffd4 55%, #ffffff7a 100%);
+}
+
+.kq-thuong-otc {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 12px auto;
+  padding: 14px 16px;
+  max-width: 420px;
+  border-radius: 18px;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, #d4a017) 48%, #fff);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--mau-chuong, #d4a017) 14%, #fff), #fffdf5);
+}
+
+.kq-thuong-otc img {
+  position: relative;
+  z-index: 2;
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.kq-thuong-otc p {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--mau-chuong, #7a4c00) 85%, #111827);
+}
+
+.hh-chuong-ds {
+  list-style: none;
+  margin: 10px 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+  gap: 10px;
+}
+
+.hh-chuong a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  height: 100%;
+  padding: 10px 8px;
+  border-radius: 16px;
+  text-decoration: none;
+  background: color-mix(in srgb, var(--hh) 10%, #fff);
+  border: 2px solid color-mix(in srgb, var(--hh) 34%, #fff);
+  color: inherit;
+}
+
+.hh-chuong.hh--chua a {
+  filter: grayscale(0.85);
+  opacity: 0.7;
+}
+
+.hh-chuong__anh {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.hh-chuong b {
+  font-size: 0.88rem;
+  color: color-mix(in srgb, var(--hh) 80%, #111827);
+}
+
+.hh-chuong small {
+  font-size: 0.74rem;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.chuong-huy-hieu-dat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  padding: 6px 12px;
+  border-radius: 14px;
+  background: #ffffffeb;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, #eab308) 45%, #fff);
+  font-weight: 800;
+  font-size: 13.5px;
+  color: color-mix(in srgb, var(--mau-chuong, #7a4c00) 85%, #111827);
+}
+
+/* ---------- 9. Đợt 3: Kiến thức nền sao, Lộ trình trạm, Vi bài học, Đánh giá ---------- */
+.nen-the__dau {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nen-the__hinh {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex: none;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--mau-chuong, var(--line)) 10%, #fff);
+  padding: 4px;
+}
+
+.nen-the__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  min-width: 0;
+}
+
+.nen-sao {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.nen-sao__on {
+  color: #f59e0b;
+}
+
+.nen-sao__off {
+  color: #cbd5e1;
+}
+
+.nen-sao small {
+  margin-left: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.nen-tom-tat {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, var(--line)) 32%, #fff);
+  background: color-mix(in srgb, var(--mau-chuong, var(--line)) 7%, #fff);
+}
+
+.nen-tom-tat__buoc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nen-tom-tat__buoc span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid color-mix(in srgb, var(--mau-chuong, var(--line)) 32%, #fff);
+}
+
+/* Lộ trình: bản đồ 3-4 trạm */
+.lt-ban-do {
+  list-style: none;
+  margin: 12px 0 18px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  position: relative;
+}
+
+.lt-tram {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 14px;
+  border-radius: 16px;
+  border: 2px solid color-mix(in srgb, var(--mau-chuong, var(--line)) 28%, #fff);
+  background: #fff;
+}
+
+.lt-tram--chinh {
+  border-color: var(--mau-chuong, var(--navy));
+  background: color-mix(in srgb, var(--mau-chuong, var(--navy)) 7%, #fff);
+  box-shadow: 0 6px 18px -12px var(--mau-chuong, var(--navy));
+}
+
+.lt-tram--xong {
+  border-color: #86efac;
+  background: #f4fbf6;
+}
+
+.lt-tram__so {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--mau-chuong, var(--navy));
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  flex: none;
+}
+
+.lt-tram--xong .lt-tram__so {
+  background: #16a34a;
+}
+
+.lt-tram__noi {
+  min-width: 0;
+}
+
+.lt-tram__nhan {
+  display: inline-block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--mau-chuong, var(--navy)) 82%, #111827);
+}
+
+.lt-tram__noi p {
+  margin: 0 0 10px;
+  line-height: 1.5;
+}
+
+/* Vi bài học: 3 thẻ 3 màu + mỗi ví dụ một khung + công thức trong khung */
+.vbh-the {
+  border-width: 2px;
+  border-left-width: 6px;
+}
+
+.vbh-the--quy-tac {
+  background: linear-gradient(155deg, #eff6ff, #ffffff 60%);
+  border-color: #93c5fd;
+  border-left-color: #2563eb;
+}
+
+.vbh-the--vi-du {
+  background: linear-gradient(155deg, #ecfdf5, #ffffff 60%);
+  border-color: #86efac;
+  border-left-color: #16a34a;
+}
+
+.vbh-the--tu-lam {
+  background: linear-gradient(155deg, #fff7ed, #ffffff 60%);
+  border-color: #fdba74;
+  border-left-color: #ea580c;
+}
+
+.vbh-vd-luoi {
+  display: grid;
+  gap: 12px;
+}
+
+.vbh-vd-khung {
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff;
+  border: 1.5px solid #86efac;
+  box-shadow: 0 3px 0 #dcfce7;
+}
+
+.vbh-vd-khung__so {
+  display: inline-block;
+  margin-bottom: 6px;
+  padding: 2px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  background: #dcfce7;
+  color: #166534;
+}
+
+.vbh-ct {
+  display: inline-block;
+  margin: 2px 3px;
+  padding: 2px 9px;
+  border-radius: 9px;
+  border: 1.5px solid color-mix(in srgb, var(--mau-chuong, #2563eb) 45%, #fff);
+  background: #ffffff;
+  color: #0f172a;
+  font-weight: 700;
+  line-height: 1.5;
+  vertical-align: middle;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+.vbh-the .math-block {
+  background: #f8fbff;
+  border: 1px solid color-mix(in srgb, var(--mau-chuong, #2563eb) 28%, #fff);
+  border-radius: 10px;
+  padding: 6px 10px;
+}
+
+/* Đánh giá kết quả: hình 5 mức */
+.kq-gon__muc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  margin: 8px 0 6px;
+}
+
+.kq-gon__muc img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+
+.kq-gon__muc-chip {
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 800;
+  background: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 14%, #fff);
+  color: color-mix(in srgb, var(--mau-chuong, #2b4ba8) 84%, #111827);
+  border: 1.5px solid color-mix(in srgb, var(--mau-chuong, #2b4ba8) 38%, #fff);
+}
+
+/* ---------- 10. Tôn trọng prefers-reduced-motion ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .bay-don-vi,
+  .lc-thuong__anh,
+  .lc-phao i,
+  .lv-anh--dong {
+    animation: none !important;
+  }
+  .lc-phao {
+    display: none;
+  }
+}
+
+/* ---------- 11. Đầu trang gọn (<= 160px trên điện thoại) ---------- */
+.dau-trang--gon {
+  min-height: 124px;
+  padding: 16px 20px 18px;
+}
+@media (max-width: 640px) {
+  .dau-trang--chuong img.dau-trang__nen {
+    display: block;
+  }
+  .dau-trang--gon {
+    min-height: 104px;
+    max-height: 160px;
+    padding: 12px 14px 14px;
+    overflow: hidden;
+  }
+  .dau-trang--gon .dau-trang__dia-danh {
+    margin: 0 0 4px;
+    gap: 4px;
+  }
+  .dau-trang--gon .dau-trang__dia-danh > span {
+    font-size: 11.5px;
+    padding: 2px 8px;
+  }
+  .dau-trang--gon h1 {
+    font-size: clamp(18px, 4.8vw, 22px);
+    line-height: 1.18;
+    margin: 2px 0 4px;
+  }
+  .dau-trang--gon .sub {
+    font-size: 13px;
+    line-height: 1.35;
+    margin: 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+/* ---------- 12. Hình Vi bài học (Sai / Đúng & Bin / Na) ---------- */
+.vbh-hinh-khung h2 {
+  margin-bottom: 10px;
+}
+.vbh-doi-chieu {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.vbh-doi-chieu__o {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+  background: #fff;
+  min-width: 0;
+}
+.vbh-doi-chieu__o--sai {
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+.vbh-doi-chieu__o--dung {
+  border-color: #bbf7d0;
+  background: #f3fcf6;
+}
+.vbh-doi-chieu__nhan {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.vbh-doi-chieu__nhan--sai {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.vbh-doi-chieu__nhan--dung {
+  background: #dcfce7;
+  color: #166534;
+}
+.vbh-svg {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  display: block;
+}
+.vbh-doi-chieu__chu {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  color: var(--ink);
+  line-height: 1.35;
+}
+.vbh-bin-na {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: 10px;
+}
+.vbh-bin-na__buoc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 14px;
+  border: 1.5px solid var(--line);
+}
+.vbh-bin-na__buoc--sai {
+  border-color: #fecaca;
+  background: #fff7f7;
+}
+.vbh-bin-na__buoc--dung {
+  border-color: #bbf7d0;
+  background: #f3fcf6;
+}
+.vbh-bin-na__buoc img {
+  width: min(100%, 116px);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+.vbh-bin-na__mui-ten {
+  font-size: 24px;
+  font-weight: 900;
+  color: var(--mau-chuong, var(--navy));
+}
+@media (max-width: 520px) {
+  .vbh-doi-chieu {
+    grid-template-columns: 1fr;
+  }
+  .vbh-bin-na {
+    gap: 6px;
+  }
+  .vbh-bin-na__buoc {
+    padding: 8px 6px;
+  }
+  .vbh-bin-na__buoc img {
+    width: 84px;
+  }
+}
+
+/* ---------- 13. Linh vật Đà Nẵng ---------- */
+.lv-khung {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.lv-khung--co-chu {
+  display: flex;
+  text-align: center;
+}
+.lv-anh {
+  object-fit: contain;
+  display: block;
+}
+.lv-anh--dong {
+  animation: dt-nhun 3.2s ease-in-out infinite;
+}
+.lv-den-trang {
+  filter: grayscale(1) contrast(1.18);
+}
+.lv-chu-thich {
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+  font-weight: 600;
+}
+.lc-linh-vat-hang {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 6px;
+}
+.kq-len-cap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  margin: 8px auto 4px;
+  border-radius: 14px;
+  background: #fffbeb;
+  border: 1.5px solid #fcd34d;
+  color: #78350f;
+  font-size: 13.5px;
+  font-weight: 700;
+}
+.sl-trong-lv {
+  text-align: center;
+  padding: 20px 16px;
+}

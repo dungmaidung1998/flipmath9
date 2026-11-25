@@ -1,0 +1,30 @@
+# Bí mật và dữ liệu cá nhân — KHÔNG BAO GIỜ đưa lên kho mã nguồn
+.env
+.env.*
+!.env.example
+*mat-khau*
+*matkhau*
+*password*
+*dang-nhap*.txt
+*danh-sach*hs*.txt
+supabase/*.txt
+
+# Dữ liệu nghiên cứu thô — giữ trong 03-Du-lieu-goc, không để trong mã nguồn
+*.csv
+!khong-co-du-lieu.csv
+
+# Bản dựng và thư viện
+.next/
+out/
+node_modules/
+*.tsbuildinfo
+
+# Bản sao lưu tạm
+_backup*/
+_to_delete*/
+trien-khai-vercel.ps1
+TRIEN-KHAI-VERCEL.bat
+vercel-ket-qua.txt
+TAO-TAI-KHOAN-THUC-NGHIEM.bat
+scripts/tao-tai-khoan-thuc-nghiem.mjs
+vercel-bien.txt

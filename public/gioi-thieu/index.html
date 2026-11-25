@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FlipMath9 · Lớp học đảo ngược Toán 9</title>
+<meta name="description" content="Học sinh xem trước bài mới ở nhà và làm phiếu chuẩn bị. Mỗi đáp án sai được gọi đúng tên lỗi, nên sáng hôm sau cô giáo biết lớp vướng ở đâu.">
+<meta name="theme-color" content="#F6F8FE">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%23CF2E26'/><text x='16' y='23' font-family='Arial' font-weight='700' font-size='18' text-anchor='middle' fill='white'>9</text></svg>">
+<link rel="preload" href="/fonts/baloo-2-vietnamese-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/gioi-thieu/anh/toi-moi-nv.webp" as="image">
+<link rel="stylesheet" href="/fonts/fonts.css">
+<link rel="stylesheet" href="/gioi-thieu/scrollcraft.css">
+<link rel="stylesheet" href="/gioi-thieu/trang.css">
+<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<a class="bo-qua" href="/dang-nhap">Bỏ qua phần giới thiệu, đến trang đăng nhập</a>
+
+<main id="dau-trang">
+  <section class="hai-ben" data-sc-act="pin" data-sc-span="8" aria-label="So sánh cách học cũ và lớp học đảo ngược">
+    <div data-sc-stage class="san-khau">
+
+      <!-- ============ VẠCH CHIA: chính là thanh điều hướng ============ -->
+      <div class="vach">
+        <div class="vach__duong" aria-hidden="true"></div>
+        <div class="vach__ban-le">
+          <a class="vach__ten" href="#dau-trang">Flip<span>Math9</span></a>
+          <span class="vach__luc" id="vach-luc" aria-hidden="true">Tối hôm trước</span>
+        </div>
+      </div>
+      <nav class="dieu-huong" aria-label="Tài khoản">
+        <a class="dieu-huong__vao" href="/dang-nhap">Đăng nhập</a>
+      </nav>
+
+      <!-- ============ BÊN CŨ ============ -->
+      <div class="ben ben--cu" aria-label="Cách học cũ">
+        <div class="ben__canh canh-cu canh--toi" data-canh="toi">
+          <div class="khung-anh">
+            <img class="lop lop--nen" src="/gioi-thieu/anh/toi-cu-nen.webp" width="1000" height="1250" alt="">
+            <img class="lop lop--nv" src="/gioi-thieu/anh/toi-cu-nv.webp" width="1000" height="1250" alt="Một bạn học sinh ngồi chống cằm bên bàn học, sách đóng, đèn tắt.">
+            <img class="lop lop--truoc" src="/gioi-thieu/anh/toi-cu-truoc.webp" width="1000" height="1250" alt="">
+          </div>
+        </div>
+        <div class="ben__canh canh-cu canh--lop" data-canh="lop">
+          <div class="khung-anh">
+            <img class="lop" src="/gioi-thieu/anh/lop-cu-all.webp" width="1000" height="1250" alt="Cô giáo quay lưng viết kín bảng, bạn học sinh gãi đầu." loading="lazy">
+          </div>
+        </div>
+        <div class="ben__canh canh-cu canh--giay" data-canh="giay"></div>
+
+        <div class="ben__chu chu-cu chu--toi" data-sc-cue="0 0.15 0 0.04">
+          <p class="nhan nhan--cu">Cách học cũ</p>
+          <h2 class="tieu-de">Tối nay chưa biết mai học gì.</h2>
+          <p class="than-chu">Sáng mai nghe giảng bài mới từ đầu. Về nhà mới làm bài tập.</p>
+        </div>
+
+        <div class="ben__chu chu-cu chu--phieu" data-sc-cue="0.16 0.52 0.03 0.04">
+          <p class="nhan nhan--cu">Cách học cũ</p>
+          <div class="to-giay" aria-live="polite">
+            <p class="to-giay__dau">Bài tập về nhà</p>
+            <p class="to-giay__de">−2x &gt; 6</p>
+            <p class="to-giay__chon" id="cu-chon">Chưa làm</p>
+            <span class="dau-x" id="cu-x" aria-hidden="true">✗</span>
+          </div>
+          <p class="than-chu" id="cu-loi">Sai thì chỉ có một dấu gạch đỏ. Sai vì sao, đợi đến buổi chữa bài.</p>
+        </div>
+
+        <div class="ben__chu chu-cu chu--lop" data-sc-cue="0.53 0.73 0.03 0.04">
+          <p class="nhan nhan--cu">Cách học cũ</p>
+          <h2 class="tieu-de tieu-de--nho">Cô giảng lại cho cả lớp, từ đầu.</h2>
+          <p class="than-chu">Ai vướng ở đâu, phải đợi đến bài kiểm tra mới lộ ra.</p>
+        </div>
+
+        <div class="ben__chu chu-cu chu--nam" data-sc-cue="0.72 0.88 0.03 0.04">
+          <p class="nhan nhan--cu">Cả năm học</p>
+          <p class="tieu-de tieu-de--nho">Lỗi cũ chưa sửa, lỗi mới chồng lên.</p>
+        </div>
+      </div>
+
+      <!-- ============ BÊN MỚI ============ -->
+      <div class="ben ben--moi" aria-label="Lớp học đảo ngược FlipMath9">
+        <div class="ben__canh canh-moi canh--toi" data-canh="toi">
+          <div class="khung-anh">
+            <img class="lop lop--nen" src="/gioi-thieu/anh/toi-moi-nen.webp" width="1000" height="1250" alt="">
+            <img class="lop lop--nv" src="/gioi-thieu/anh/toi-moi-nv.webp" width="1000" height="1250" alt="Cùng bạn ấy, đèn bàn sáng ấm, máy tính bảng đang phát video bài học, vở ô ly mở.">
+            <img class="lop lop--truoc" src="/gioi-thieu/anh/toi-moi-truoc.webp" width="1000" height="1250" alt="">
+          </div>
+        </div>
+        <div class="ben__canh canh-moi canh--lop" data-canh="lop">
+          <div class="khung-anh">
+            <img class="lop" src="/gioi-thieu/anh/lop-moi-all.webp" width="1000" height="1250" alt="Cô giáo quay xuống lớp, bạn học sinh giơ tay." loading="lazy">
+            <div class="bang-phan" aria-hidden="true">
+              <div class="bang-phan__chu" data-sc-reveal="right" data-sc-reveal-at="0.55 0.6">
+                <span class="bang-phan__dong">−2x &gt; 6</span>
+                <span class="bang-phan__dong">chia cho −2 <b>ĐỔI CHIỀU</b></span>
+                <span class="bang-phan__dong bang-phan__kq">x &lt; −3</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ben__canh canh-moi canh--giay" data-canh="giay"></div>
+        <div class="ben__canh canh-moi canh--san" data-canh="san">
+          <div class="khung-anh khung-anh--ngang">
+            <img class="lop" src="/gioi-thieu/anh/san-all.webp" width="1920" height="1080" alt="Hai bạn học sinh đứng trước dãy lớp học sơn vàng, vẫy tay." loading="lazy">
+          </div>
+        </div>
+
+        <div class="ben__chu chu-moi chu--toi" data-sc-cue="0 0.15 0 0.04">
+          <p class="nhan nhan--moi">Lớp học đảo ngược</p>
+          <h1 class="tieu-de tieu-de--lon">Lật ngược cách học, vững bước vào 10.</h1>
+          <p class="than-chu">Tối nay em xem trước bài mới bằng một video ngắn và làm phiếu chuẩn bị. Sáng mai cô đã biết em vướng ở đâu.</p>
+        </div>
+
+        <!-- ĐỈNH: câu hỏi thật trong ngân hàng (C2-B6-M2-Q02). -->
+        <div class="ben__chu chu-moi chu--phieu" data-sc-cue="0.17 0.52 0.03 0.04" data-sc-rise="0" data-buoc="0.2">
+          <div class="phieu" role="group" aria-labelledby="phieu-de">
+            <p class="phieu__dau">Phiếu chuẩn bị · Bài 6. Bất phương trình bậc nhất một ẩn</p>
+            <p class="phieu__de" id="phieu-de">Nghiệm của bất phương trình −2x &gt; 6 là:</p>
+            <div class="phieu__chon">
+              <button type="button" class="dap-an" data-dung="0" data-ma="E-BPT-02">x &gt; −3</button>
+              <button type="button" class="dap-an" data-dung="1">x &lt; −3</button>
+              <button type="button" class="dap-an" data-dung="0" data-ma="E-BPT-02">x &gt; 3</button>
+              <button type="button" class="dap-an" data-dung="0" data-ma="E-BPT-02">x &lt; 3</button>
+            </div>
+            <div class="phieu__phan-hoi" id="phan-hoi" aria-live="polite">
+              <p class="phieu__moi">Thử chọn một đáp án, kể cả đáp án sai.</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="bang-co" data-sc-cue="0.17 0.52 0.03 0.04" data-sc-rise="0" aria-label="Bảng của cô">
+          <p class="bang-co__dau">Bảng của cô · Bài 6</p>
+          <ul class="bang-co__ds" id="bang-co">
+            <li class="bang-co__trong">Chưa có lỗi nào.</li>
+          </ul>
+          <p class="bang-co__chu-thich">Bảng này chỉ đếm các lựa chọn của bạn trên trang này.</p>
+        </aside>
+
+        <div class="ben__chu chu-moi chu--lop" data-sc-cue="0.53 0.73 0.03 0.04" data-buoc="0.62">
+          <p class="nhan nhan--moi">Sáng hôm sau, trên lớp</p>
+          <h2 class="tieu-de tieu-de--nho">Cô mở đầu tiết học bằng đúng lỗi lớp hay mắc.</h2>
+          <ul class="ds-gv">
+            <li>Ai đã chuẩn bị bài, ai chưa, theo từng mục của bài.</li>
+            <li>Lỗi nào nhiều nhất, lỗi gốc nào kéo theo lỗi khác.</li>
+            <li>Gợi ý cách tổ chức tiết 45 phút. Cô chọn, sửa hoặc bỏ.</li>
+            <li>Sau tiết học: lỗi nào đã sửa, lỗi nào còn.</li>
+          </ul>
+          <p class="than-chu than-chu--nho">Hệ thống chẩn đoán và gợi ý. Giáo viên là người quyết định.</p>
+        </div>
+
+        <div class="ben__chu chu-moi chu--nam" data-sc-cue="0.73 0.88 0.03 0.04" data-buoc="0.79">
+          <p class="nhan nhan--moi">Toán 9 Kết nối tri thức, cả năm học</p>
+          <dl class="so-lieu">
+            <div class="so-lieu__chinh"><dt>câu hỏi chẩn đoán</dt><dd><span data-sc-count="0 656" data-sc-count-at="0.75 0.8">656</span></dd></div>
+            <div><dt>video bài học</dt><dd><span data-sc-count="0 81" data-sc-count-at="0.755 0.8">81</span></dd></div>
+            <div><dt>mục kiến thức</dt><dd><span data-sc-count="0 82" data-sc-count-at="0.76 0.8">82</span></dd></div>
+            <div><dt>bài</dt><dd><span data-sc-count="0 32" data-sc-count-at="0.765 0.8">32</span></dd></div>
+            <div><dt>chương</dt><dd><span data-sc-count="0 10" data-sc-count-at="0.77 0.8">10</span></dd></div>
+          </dl>
+          <p class="than-chu than-chu--nho">Mỗi đáp án sai đều gắn với một lỗi có tên, có gợi ý ba tầng và vi bài học sửa đúng lỗi đó.</p>
+        </div>
+
+        <div class="ben__chu chu-moi chu--ket" data-sc-cue="0.87 1 0.2 0" data-buoc="0.95">
+          <h2 class="tieu-de tieu-de--lon">Hẹn em ở bài học tối nay.</h2>
+          <p class="than-chu">Học sinh đăng nhập bằng mã lớp và mã học sinh cô phát. Giáo viên đăng nhập bằng email.</p>
+          <a class="nut-chinh" href="/dang-nhap" data-sc-magnet="0.22">Đăng nhập</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<footer class="chan-trang">
+  <div class="chan-trang__trong">
+    <p><b>FlipMath9</b> · Lớp học đảo ngược môn Toán 9, sách Kết nối tri thức với cuộc sống. Phát triển từ nền tảng MathFlip.</p>
+    <p>Video bài học dùng lại từ kênh OLM.VN, có ghi nguồn. Câu hỏi đang ở bản thử nghiệm, giáo viên duyệt trước khi dùng. Hình minh hoạ vẽ bằng máy tính.</p>
+    <p>Đang xây dựng: ôn thi vào 10 theo đề Đà Nẵng, trò chơi ôn kiến thức nền lớp 6 đến lớp 8, song ngữ Việt và Anh, đọc to đề cho học sinh khiếm thị.</p>
+    <p><a href="/dang-nhap">Đăng nhập</a></p>
+  </div>
+</footer>
+
+<script src="/gioi-thieu/scrollcraft.js"></script>
+<script src="/gioi-thieu/trang.js"></script>
+</body>
+</html>

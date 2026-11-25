@@ -1,0 +1,153 @@
+/* MỤC ĐÍCH: Giao diện hộp thoại chụp ảnh chấm vở KHKT và vùng hiển thị kết quả từng dòng. */
+.cv-nut-mo {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1.5px solid #2563eb;
+  background: #eff6ff;
+  color: #1e40af;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.cv-nut-mo:hover {
+  background: #dbeafe;
+}
+
+.cv-man {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  background: rgba(15, 23, 42, 0.62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.cv-hop {
+  background: #ffffff;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 720px;
+  max-height: 92vh;
+  overflow: auto;
+  padding: 20px 22px;
+  box-shadow: 0 24px 54px rgba(15, 23, 42, 0.28);
+}
+
+.cv-dau {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.cv-nhan-ai {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.cv-canh-bao-pii {
+  padding: 8px 12px;
+  border-radius: 10px;
+  background: #fffbeb;
+  border: 1px solid #fcd34d;
+  color: #92400e;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.cv-canvas-khung {
+  background: #0f172a;
+  border-radius: 12px;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.cv-canvas-khung img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+}
+
+.cv-dong-sua {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 8px;
+  align-items: start;
+  padding: 8px 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.cv-kq-dong {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1.5px solid #e2e8f0;
+  display: grid;
+  gap: 4px;
+}
+
+.cv-kq-dong.dung {
+  border-color: #86efac;
+  background: #f0fdf4;
+}
+
+.cv-kq-dong.sai {
+  border-color: #fca5a5;
+  background: #fef2f2;
+}
+
+.cv-kq-dong.thieu {
+  border-color: #fcd34d;
+  background: #fffbeb;
+}
+
+.cv-kq-dong.sai-dau {
+  border: 2.5px solid #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.14);
+}
+
+.cv-nua-bai {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #eff6ff;
+  border: 1.5px solid #60a5fa;
+  color: #1e3a8a;
+}
+
+.cv-rut-kn {
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: #fefce8;
+  border: 1.5px solid #facc15;
+  color: #713f12;
+}
+
+.cv-chan-minh-bach {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px solid #e2e8f0;
+  font-size: 12.5px;
+  color: #475569;
+  font-style: italic;
+}

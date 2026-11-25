@@ -1,0 +1,30 @@
+-- ===========================================================================
+-- DỮ LIỆU KHỞI TẠO — chạy SAU 01-schema.sql
+--
+-- Tệp này CỐ TÌNH KHÔNG còn chứa bài học nào nữa.
+--
+-- Nội dung học thật nằm ở 07-noi-dung-chuong-1.sql: 14 đơn vị kiến thức cắt
+-- theo từng mục của Chương I, 23 mã lỗi, 70 câu hỏi chẩn đoán và 69 gợi ý theo
+-- tầng — tất cả sinh tự động từ dfle-engine/src/chuong1.js nên luôn khớp với bộ
+-- kiểm tra ở test/chuong1.test.js.
+--
+-- Trước đây tệp này gieo sẵn sáu đơn vị kiến thức mẫu (tỉ lệ thức, đại lượng tỉ
+-- lệ). Chúng đã được bỏ đi để tránh trường hợp học sinh mở ứng dụng ra và thấy
+-- lẫn lộn bài của Chương I với bài của chương khác. Tệp 07 có sẵn phần dọn dẹp
+-- an toàn cho các cơ sở dữ liệu đã trót nạp bản cũ.
+-- ===========================================================================
+
+-- ------------------------------------------------------------ lớp học mẫu
+-- Sau khi tạo tài khoản giáo viên trong Supabase → Authentication → Users
+-- (nhớ tích "Auto Confirm User"), thay <UUID-GIAO-VIEN> bằng id của tài khoản
+-- đó rồi chạy đoạn dưới.
+--
+-- insert into classes (class_id, class_code, grade, arm, teacher_id)
+--   values ('7A1', '7A1', 7, 'TN', '<UUID-GIAO-VIEN>')
+--   on conflict (class_id) do update set teacher_id = excluded.teacher_id;
+-- insert into profiles (id, role, class_id, full_name)
+--   values ('<UUID-GIAO-VIEN>', 'giao-vien', '7A1', 'Giáo viên chủ nhiệm')
+--   on conflict (id) do update set role = excluded.role, class_id = excluded.class_id;
+--
+-- Học sinh được tạo bằng trang /gv/hoc-sinh trong ứng dụng, không tạo tay ở đây.
+-- Và không tạo tài khoản học sinh thật trước khi Hội đồng thẩm định duyệt Phiếu 4.

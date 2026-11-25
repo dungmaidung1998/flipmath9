@@ -1,0 +1,64 @@
+/* MỤC ĐÍCH: Kiểu dáng lộ trình học tập từng bước từ chuẩn bị ở nhà tới luyện tập. */
+.ht{max-width:760px;margin:12px 0 22px;padding:clamp(8px,2vw,16px);border:1px solid var(--line);border-radius:16px;background:var(--bg);color:var(--ink);line-height:1.5;text-align:left}
+.ht-dau{display:flex;align-items:start;justify-content:space-between;gap:8px}
+.ht-dau h2,.ht-chang h3{color:var(--navy-d);margin:0}
+.ht-dau h2{font-size:1.2rem}
+.ht button,.ht-toggle{font:inherit;cursor:pointer}
+.ht button:focus-visible,.ht-toggle:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+.ht-am{border:1px solid var(--line);border-radius:50%;background:var(--card);min-width:44px;min-height:44px}
+.ht-toggle{padding:9px 13px;border-radius:12px;border:1px solid var(--line);background:var(--chip);color:var(--navy-d);font-weight:700}
+.ht-de,.ht-chang{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px}
+.ht-tien-do{display:flex;gap:5px;margin:8px 0}
+.ht-tien-do i{flex:1;background:var(--line);border-radius:8px;height:7px}
+.ht-tien-do .dang{background:var(--navy)}.ht-tien-do .xong{background:#23a46b}
+.ht-gom{background:var(--bg);padding:6px 0;z-index:3}
+.ht-gom.gon{position:sticky;top:0;display:grid;grid-template-columns:minmax(0,38%) minmax(0,1fr);align-items:start;gap:8px}
+.ht-tranh{position:relative;container-type:inline-size;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+.ht-gom.gon .ht-tranh{max-width:220px}
+.ht-tranh img{display:block;width:100%;height:auto}
+.ht-diem{position:absolute;display:grid;place-items:center;transform:translate(-50%,-50%);width:clamp(20px,8cqw,34px);height:clamp(20px,8cqw,34px);padding:0;border:3px solid white;border-radius:50%;background:#2747a8;color:white;box-shadow:0 2px 8px #0006;animation:ht-song 1.6s infinite}
+.ht-diem.da{background:#117649;animation:none}
+.ht-diem.da .ht-tich{width:min(24px,100%);height:min(24px,100%)}
+.ht-bong{position:absolute;pointer-events:none;left:8px;right:8px;bottom:7px;background:#172944ed;color:#fff;border-radius:9px;padding:7px 9px;margin:0;font-size:.88rem}
+.ht-so{font-size:.86rem;min-width:0}
+.ht-so strong{display:block;margin:4px 0}
+.ht-so p,.ht-chang p,.ht-tong-ket p{margin:5px 0}
+.ht-so ul,.ht-tong-ket ul{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0;gap:5px}
+.ht-so li,.ht-dung-du-kien span{border:2px solid transparent;background:var(--chip);color:var(--navy-d);border-radius:11px;padding:3px 8px;line-height:1.35}
+.ht-gom.gon .ht-so{max-height:30dvh;overflow:auto;scrollbar-width:thin}
+.ht-so li.sang,.ht-dung-du-kien span{color:var(--ink);background:color-mix(in srgb,#eda625 24%,var(--card));border-color:#d39622}
+.ht-dung-du-kien{display:flex;flex-wrap:wrap;align-items:center;gap:5px;font-size:.86rem;margin-bottom:8px}
+.ht-chang{margin:6px 0}
+.ht-chang.khoa{opacity:.62}
+.ht-chang h3{display:flex;align-items:center;gap:8px;font-size:1rem}
+.ht-so-chang,.ht-tich{width:26px;height:26px;display:inline-grid;place-items:center;border-radius:50%;flex:none;font-size:.82rem;font-weight:800}
+.ht-so-chang{color:var(--card);background:var(--navy)}
+.ht-tich{background:radial-gradient(circle at 34% 30%,#ffe890,#f2b213 60%,#c98900);color:#352500;box-shadow:0 2px 8px #c589004a;animation:ht-bat .42s cubic-bezier(.2,1.6,.4,1)}
+.ht-cau,.ht-tong-ket{scroll-margin-top:min(36vh,225px)}
+.ht-cau,.ht-da-chon{margin-top:8px}
+.ht-pa{display:flex;flex-direction:column;gap:6px}
+.ht-pa button{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:11px;padding:9px 11px;text-align:left;min-height:44px;overflow-wrap:anywhere}
+.ht-pa button:hover{border-color:var(--navy)}
+.ht-pa button.sai{cursor:default;border-color:#df6d62;background:color-mix(in srgb,#ec776d 18%,var(--card))}
+.ht-goi-y,.ht-doi-chieu{padding:8px 11px;border-radius:9px;background:color-mix(in srgb,#eda625 19%,var(--card));border-left:4px solid #d39622;margin:8px 0}
+.ht-da-chon{display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #35a470;background:color-mix(in srgb,#45bb82 14%,var(--card));border-radius:10px;padding:6px 10px}
+.ht-tong-ket{border:2px solid #35a470;border-radius:16px;background:color-mix(in srgb,#45bb82 13%,var(--card));padding:14px;margin-top:12px}
+.ht-tong-ket h3{margin:0 0 6px}
+.ht-tong-ket ul{flex-direction:column}
+.ht-tong-ket li{display:flex;justify-content:space-between;gap:6px}
+.ht-tong-ket li b{white-space:nowrap}
+.ht-loi{margin-top:10px;padding:8px 10px;border-radius:9px;background:var(--card)}
+.ht-loi ul{list-style:disc;padding-left:19px}
+.ht-loi li{display:list-item}
+.ht-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.ht-danh-sach{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:7px;padding:0;list-style:none}
+.ht-danh-sach a{display:block;background:var(--card);border:1.5px solid color-mix(in srgb,var(--mau-chuong,var(--line)) 30%,#fff);border-left:5px solid var(--mau-chuong,var(--navy));border-radius:10px;padding:8px 12px;color:var(--navy-d);text-decoration:none}
+.ht-danh-sach a:hover{border-color:var(--mau-chuong,var(--navy));background:color-mix(in srgb,var(--mau-chuong,var(--chip)) 8%,#fff)}
+.ht-danh-sach small{display:block;color:var(--muted)}
+.ht-nhom-chuong{margin-bottom:20px}
+.ht-nhom-chuong__tieu{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px;font-size:1.08rem;color:color-mix(in srgb,var(--mau-chuong,var(--navy-d)) 82%,#111827)}
+@keyframes ht-song{50%{box-shadow:0 0 0 8px #2c4db333}}
+@keyframes ht-bat{from{transform:scale(0) rotate(-25deg)}to{transform:scale(1)}}
+@media(prefers-reduced-motion:reduce){.ht *{animation:none!important;transition:none!important}}
+
+.gv-noi .ht-gom.gon{top:60px}

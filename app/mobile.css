@@ -1,0 +1,244 @@
+/* ===== Tối ưu điện thoại (≤ 640px). Nạp sau globals.css nên ghi đè được. ===== */
+html,body{overflow-x:clip}
+img,svg,video,iframe,canvas{max-width:100%}
+.learning-screen-body{overflow-x:hidden}
+
+@media (max-width:640px){
+  /* Thanh menu trên: 1 dòng tên web + 1 dải menu vuốt ngang, thay cho 5 dòng link */
+  .topnav{padding:8px 12px 6px;gap:4px;flex-direction:column;align-items:stretch;flex-wrap:nowrap;position:sticky;top:0;z-index:60;width:100%;max-width:100vw;box-sizing:border-box}
+  .topnav>*{min-width:0;max-width:100%}
+  .topnav .brand{font-size:17px}
+  .topnav nav{flex-wrap:nowrap;overflow-x:auto;gap:6px;font-size:14px;margin:0 -12px;padding:2px 12px 4px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .topnav nav::-webkit-scrollbar{display:none}
+  .topnav nav a,.topnav nav button{flex:none;white-space:nowrap;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:13.5px;min-height:36px}
+  .topnav nav a[aria-current="page"]{background:var(--navy);border-color:var(--navy);color:#fff}
+
+  /* Thanh bước học: 8 bước vừa 1 hàng, không đẩy trang sang ngang */
+  .stepper-nav-bar{padding:10px 6px;margin:0 0 14px;border-radius:14px}
+  .stepper-nav-items{gap:0}
+  .stepper-nav-btn{min-width:0;flex:1 1 0}
+  .stepper-nav-circle{width:30px;height:30px;font-size:13px}
+  .stepper-nav-track{top:24px;left:24px;right:24px;height:3px}
+  .stepper-nav-btn.active .stepper-nav-circle{transform:scale(1.12);box-shadow:0 0 0 3px rgba(37,99,217,.2)}
+  .stepper-nav-btn.active .stepper-nav-label{display:none}
+
+  /* Khung học toàn màn hình */
+  .learning-screen>header{padding:10px 14px}
+  .learning-screen-body>main{padding:12px 12px 90px}
+  .learning-screen h2{font-size:18px}
+  .learning-screen>footer{padding:8px 12px max(8px,env(safe-area-inset-bottom))}
+  .learning-screen>footer>div{gap:10px}
+  .learning-screen>footer p.ls-nhac{font-size:12.5px;padding:5px 12px}
+  .learning-screen button{min-height:44px;padding:9px 14px}
+
+  /* Nút trợ năng (con mắt) và vòng giờ: nhỏ lại, mờ bớt để khỏi che chữ */
+  .tro-nang .tro-nang__mo{min-height:40px;width:40px;padding:0;justify-content:center;opacity:.85}
+  .suc-khoe-vong{width:38px;height:38px;opacity:.85}
+  /* Trong màn học: đưa con mắt + vòng giờ lên giữa thanh tiêu đề, khỏi che bài */
+  html.co-man-hoc body .tro-nang{top:3px;bottom:auto;left:50%;transform:translateX(-50%);flex-direction:column;align-items:center}
+  html.co-man-hoc body .tro-nang .tro-nang__mo{min-height:34px;width:34px;font-size:15px;border-width:1.5px;box-shadow:none;opacity:1}
+  html.co-man-hoc body .suc-khoe-vong{top:3px;bottom:auto;right:auto;left:calc(50% + 24px);width:34px;height:34px;opacity:1}
+  html.co-man-hoc body .suc-khoe-tu-the{right:auto;left:40px;bottom:auto;top:4px}
+  html.co-man-hoc body .nhac-nghi{bottom:88px}
+
+  /* Khung chung */
+  .wrap{padding:16px 12px 90px}
+  .card{padding:16px 14px;border-radius:14px;margin-bottom:14px}
+  h1{font-size:25px;line-height:1.2}
+  h2{font-size:18px}
+  table{display:block;max-width:100%;overflow-x:auto}
+  pre{white-space:pre-wrap;overflow-wrap:anywhere}
+  .katex-display{overflow-x:auto;overflow-y:hidden;padding:2px 0}
+}
+@media (max-width:640px){
+  .lich-hs__chip{white-space:normal}
+  .bai-dau .lich-hs__chip{margin-left:0}
+}
+@media (max-width:640px){
+  /* Con mắt + vòng giờ ở các trang thường: lên góc phải dòng tên web, khỏi che chữ cuối trang */
+  .tro-nang{top:4px;bottom:auto;left:auto;right:52px;flex-direction:column;align-items:flex-end}
+  .tro-nang .tro-nang__mo{min-height:32px;width:32px;font-size:14px;border-width:1.5px;box-shadow:none;opacity:1}
+  .tro-nang__bang{width:min(330px,calc(100vw - 24px));margin-right:-40px}
+  .suc-khoe-vong{top:3px;bottom:auto;right:12px;width:34px;height:34px;opacity:1}
+  .suc-khoe-tu-the{right:auto;left:auto;right:40px;bottom:auto;top:4px}
+  html.co-man-hoc body .tro-nang__bang{margin-right:0}
+  .wrap{padding-bottom:40px}
+
+  /* Thẻ từ vựng tiếng Anh: nút nhỏ lại để chữ có chỗ */
+  .ta-the{padding:10px}
+  .ta-the__tren{gap:6px}
+  .ta-so{width:22px;height:22px;font-size:12px}
+  .wrap .ta-loa{width:36px;height:36px;font-size:16px}
+  .wrap .ta-cham{width:32px;height:32px;font-size:15px}
+  .ta-en{font-size:17px}
+}
+@media (max-width:640px){
+  /* Chọn chương: dải thẻ vuốt ngang thay cho 11 thẻ to xếp dọc */
+  .chapter-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:10px;margin:0 -14px;padding:2px 14px 8px;scrollbar-width:none}
+  .chapter-grid::-webkit-scrollbar{display:none}
+  .chapter-link{flex:0 0 72%;scroll-snap-align:start;grid-template-columns:minmax(0,1fr) 56px;padding:12px;gap:8px}
+  .chapter-link__hinh{width:56px;height:56px}
+  .chapter-link__chu{gap:4px}
+  .chapter-link__chu strong{font-size:14.5px;line-height:1.3;text-transform:none}
+  .chapter-heading{font-size:17px;line-height:1.35}
+
+  /* Đầu mỗi bài: hình nhỏ bên trái, tên bài đủ rộng, nhãn lịch xuống dòng dưới */
+  .bai-dau{display:grid;grid-template-columns:48px minmax(0,1fr);gap:4px 10px;align-items:center}
+  .bai-dau__hinh{width:48px;height:48px;grid-row:span 2;border-radius:12px}
+  .bai-dau h2{font-size:16.5px;line-height:1.3}
+  .bai-dau .lich-hs__chip{justify-self:start;font-size:12px}
+
+  /* Việc cần làm gọn hơn */
+  .viec-muc{font-size:14.5px;line-height:1.5;padding:10px 12px}
+  .viec-muc .lbl{margin-top:6px;font-size:12px}
+}
+@media (max-width:640px){.chapter-heading{scroll-margin-top:96px}}
+@media (max-width:640px){
+  /* Ô số liệu: số + hình nhỏ cùng hàng, chữ chú thích chạy hết bề ngang */
+  .stat{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .stat div{padding:12px}
+  .stat div b{font-size:26px}
+  .stat--hinh>div{padding-right:12px}
+  .stat-hinh{top:10px;right:8px;transform:rotate(-6deg);width:38px;height:38px}
+  .stat--hinh>div span{display:block;margin-top:4px;line-height:1.35}
+}
+@media (max-width:640px){
+  /* Bảng dạng thẻ: mỗi dòng thành một thẻ, có nhãn cho từng ô */
+  table.bang-the,.bang-the tbody,.bang-the tr,.bang-the td{display:block;width:100%;overflow:visible}
+  .bang-the thead{display:none}
+  .bang-the tr{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:8px;background:var(--bg)}
+  .bang-the td{border:0;padding:3px 0;text-align:left}
+  .bang-the td:first-child{font-weight:600;padding-bottom:6px}
+  .bang-the td[data-nhan]{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:14px}
+  .bang-the td[data-nhan]::before{content:attr(data-nhan);color:var(--muted);font-size:13px}
+}
+@media (max-width:640px){.bang-the td:first-child .action-link{border:0;padding:0;background:none;min-height:0;font-size:15px}}
+
+/* ===================== GỌN MẮT (điện thoại) ===================== */
+.thanh-duoi,.td-bang,.td-man{display:none}
+@media (max-width:640px){
+  /* Menu: bỏ dải 8 nút trên cùng, thay bằng thanh 5 nút dưới đáy */
+  .topnav--hs nav{display:none}
+  .topnav--hs{padding:10px 14px}
+  .thanh-duoi{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;z-index:70;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:4px 4px max(4px,env(safe-area-inset-bottom))}
+  .thanh-duoi a,.thanh-duoi button{all:unset;box-sizing:border-box;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0 4px;font-size:11.5px;font-weight:600;color:#6b7280;cursor:pointer;-webkit-tap-highlight-color:transparent;min-height:50px}
+  .thanh-duoi [aria-current="page"],.thanh-duoi button[aria-expanded="true"]{color:var(--navy)}
+  .thanh-duoi [aria-current="page"] svg{stroke-width:2.4}
+  html.co-man-hoc .thanh-duoi{display:none}
+  .td-man{display:block;position:fixed;inset:0;z-index:68;background:rgba(15,23,42,.25)}
+  .td-bang{display:flex;flex-direction:column;position:fixed;left:8px;right:8px;bottom:calc(66px + env(safe-area-inset-bottom));z-index:69;background:#fff;border-radius:16px;padding:6px;box-shadow:0 10px 30px rgba(15,23,42,.18)}
+  .td-bang a{padding:14px 14px;border-radius:10px;color:var(--ink);font-weight:600;text-decoration:none}
+  .td-bang a[aria-current="page"]{background:var(--chip);color:var(--navy)}
+  .td-bang__dang-xuat{border-top:1px solid var(--line);margin-top:4px}
+  .td-bang__dang-xuat a{display:block;color:#b42318;font-weight:600}
+  .wrap{padding-bottom:96px}
+
+  /* Bớt hình trang trí: chỉ giữ chữ */
+  .dau-trang__hinh,.dau-trang img,.student-next__hinh,.stat-hinh{display:none}
+  .dau-trang--co-hinh{grid-template-columns:1fr;padding-right:0}
+  .dau-trang h1{font-size:23px}
+  .dau-trang p{font-size:14px}
+
+  /* Bớt khung lồng khung: thẻ phẳng, viền nhạt, không đổ bóng */
+  .card{box-shadow:none;border-color:#e8ecf3}
+  .card .card,.card .rule{box-shadow:none}
+  .rule{border-left-width:3px}
+  .banner{display:none}
+
+  /* Mục trong bài: một dòng chạm được, mũi tên nhỏ thay cho nút xanh lặp lại */
+  .muc-ds{gap:0;border:1px solid #e8ecf3;border-radius:12px;overflow:hidden}
+  .muc-ds li+li{border-top:1px solid #eef1f6}
+  .muc-ds__dong{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"ten vao" "muc vao";border:0;border-radius:0;background:#fff;padding:12px 12px;row-gap:6px}
+  .muc-ds__vao{grid-area:vao;padding:0;background:none;color:#9aa3b2;font-size:0}
+  .muc-ds__vao::after{content:'›';font-size:26px;line-height:1}
+  .muc-ds__ten{font-size:15px}
+  .muc-ds__ten small{font-size:12.5px}
+  .muc-ds__muc{justify-self:start}
+  .muc-ds__muc>*{transform:scale(.92);transform-origin:left center}
+}
+@media (max-width:640px){
+  .muc-ds__ten small{display:none}
+  .chapter-link__chu strong{font-size:13px;font-weight:700;letter-spacing:.01em}
+  .chapter-link__chu>span{font-size:12.5px}
+  .bai-dau__hinh{background:none;padding:0}
+}
+
+/* ===================== 22/11/2026 · TỐI GIẢN ĐIỆN THOẠI =====================
+   1) Menu học sinh gom vào nút chữ "FlipMath9 ▾" (bỏ thanh 5 nút dưới đáy).
+   2) Danh sách mục: tên mục nằm ngang đủ chữ; mức làm chủ + nút "Vào học" xuống dòng dưới. */
+.brand-nut{all:unset;cursor:pointer;font-family:var(--font-display);font-size:20px;font-weight:800;color:var(--navy-d)}
+.brand-nut:focus-visible{outline:2px solid var(--navy);outline-offset:3px;border-radius:8px}
+.brand-nut__mui,.menu-hs-man{display:none}
+@media (max-width:640px){
+  .topnav--hs{flex-direction:row;align-items:center;justify-content:space-between;padding:6px 14px}
+  .brand-nut{display:inline-flex;align-items:center;gap:6px;font-size:18px;min-height:44px;padding:0 4px}
+  .brand-nut__mui{display:inline-block;font-size:12px;transition:transform .15s}
+  .topnav--mo .brand-nut__mui{transform:rotate(180deg)}
+  .topnav--hs nav{display:none}
+  .topnav--hs.topnav--mo nav{display:flex;flex-direction:column;align-items:stretch;gap:2px;position:absolute;top:100%;left:8px;right:8px;z-index:80;margin:4px 0 0;padding:6px;overflow:visible;background:var(--card);border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 30px rgba(15,23,42,.22)}
+  .topnav--mo nav a{display:block;border:0;border-radius:10px;padding:12px 14px;min-height:0;background:none;font-size:15px;font-weight:600;color:var(--ink);white-space:normal}
+  .topnav--mo nav a[aria-current="page"]{background:var(--chip);color:var(--navy);border:0}
+  .topnav--mo nav a:last-child{border-top:1px solid var(--line);border-radius:0;margin-top:4px;color:#d1453b}
+  .menu-hs-man{display:block;position:fixed;inset:0;z-index:59;background:rgba(15,23,42,.3)}
+  .wrap{padding-bottom:32px}
+  .banner-tu-hoc{display:none}
+  .muc-ds{border-color:var(--line)}
+  .muc-ds li+li{border-top-color:var(--line)}
+  .muc-ds__dong{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"ten ten" "muc vao";background:var(--card);row-gap:8px}
+  .muc-ds__ten{white-space:normal;word-break:normal;overflow-wrap:break-word}
+  .muc-ds__vao{align-self:center;padding:6px 12px;border-radius:999px;background:var(--navy);color:var(--card);font-size:13.5px}
+  .muc-ds__vao::after{content:none}
+}
+@media (max-width:640px){
+  /* Bài không có hình minh hoạ: tiêu đề chiếm cả dòng (trước đây bị ép vào cột 48px, mỗi chữ một dòng) */
+  .bai-dau:not(:has(.bai-dau__hinh)){display:block}
+  .bai-dau h2{min-width:0}
+}
+/* Nút "Bắt đầu học" trên thẻ xanh: chữ luôn xanh đậm (giao diện tối trước đây chữ xanh nhạt trên nền trắng) */
+.student-next .btnlink{color:#2b4ba8}
+@media (max-width:640px){
+  /* Danh sách 10 chương xếp DỌC như bản cũ (bỏ dải vuốt ngang) */
+  .chapter-grid{display:grid;grid-template-columns:1fr;gap:8px;overflow:visible;scroll-snap-type:none;margin:0;padding:0}
+  .chapter-link{flex:none;width:100%;grid-template-columns:minmax(0,1fr) 92px;gap:12px;padding:16px 14px 16px 18px}
+  /* Giữ đúng kiểu thẻ chương bản cũ: tên chương chữ in hoa đậm, hình 92px */
+  .chapter-link__hinh{width:92px;height:92px}
+  .chapter-link__chu{gap:8px}
+  .chapter-link__chu>span{font-size:16px}
+  .chapter-link__chu strong{font-size:17px;font-weight:800;line-height:1.35;letter-spacing:0;text-transform:none}
+  .chapter-link small{font-size:14px}
+}
+
+/* 22/11/2026 · Thanh các bước học không tràn ở mọi độ rộng (trước đây mỗi nút tối thiểu 64px → 8 bước tràn khi màn < ~760px) */
+.stepper-nav-items{gap:4px}
+.stepper-nav-btn{min-width:0;flex:1 1 0}
+.stepper-nav-label{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media (max-width:900px){
+  .stepper-nav-bar{padding:12px 8px}
+  .stepper-nav-label,.stepper-nav-btn.active .stepper-nav-label{display:none}
+  .stepper-nav-circle{width:34px;height:34px;font-size:14px}
+  .stepper-nav-track{top:28px;left:28px;right:28px}
+}
+
+/* 22/11/2026 · Màn kết quả gọn: một con số, một lời nhắn, một gợi ý, hai nút */
+.kq-gon{text-align:center}
+.kq-gon__dau{display:flex;flex-direction:column;align-items:center;gap:2px;padding:8px 0 4px}
+.kq-gon__hinh{width:96px;height:auto;margin-bottom:4px}
+.kq-gon__so{margin:0;font-size:44px;line-height:1.1;font-weight:800;color:var(--navy-d);font-family:var(--font-display)}
+.kq-gon__so b{color:var(--navy)}
+.kq-gon__nhan{margin:0 0 6px;color:var(--muted);font-size:14px}
+.kq-gon__loi{margin:4px 0 0;font-size:19px}
+.kq-gon__goi-y{margin:14px auto 0;max-width:560px;padding:12px 14px;border-radius:12px;background:var(--chip);text-align:left;font-size:15px;line-height:1.55}
+.kq-gon__goi-y p{margin:0}.kq-gon__goi-y p+p{margin-top:6px}
+.kq-gon__nut{display:flex;flex-direction:column;align-items:stretch;gap:8px;max-width:360px;margin:18px auto 0}
+.kq-gon__nut .primary{min-height:48px;font-size:16px}
+.kq-gon__nut .action-link{min-height:44px;justify-content:center}
+.kq-gon__ds{list-style:none;padding:0;margin:12px 0 0;text-align:left}
+.kq-gon__ds li{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:14.5px}
+.sl-ma--gon li{display:flex;gap:8px;align-items:baseline;flex-wrap:wrap;padding:8px 0}
+.sl-ma__nhan{font-weight:700;white-space:nowrap}
+
+/* 22/11/2026 · Hộp nhắc nghỉ có nền kem cố định: chữ phải luôn tối (giao diện tối trước đây chữ sáng trên nền kem, gần như không đọc được) */
+.suc-khoe-che__hop,.nhac-nghi{color:#1a2233}
+.suc-khoe-che__hop h2,.nhac-nghi h2{color:#182345}
+.suc-khoe-che__hop .primary,.nhac-nghi .primary{background:#2b4ba8;border-color:#2b4ba8;color:#fff}
+.suc-khoe-che__hop .primary:disabled,.nhac-nghi .primary:disabled{opacity:.55}

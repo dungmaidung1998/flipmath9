@@ -1,0 +1,31 @@
+/* Nút nổi "Hỏi Bin" cho học sinh — góc dưới phải, tách khỏi .tro-nang (góc trái) */
+.hoi-bin{position:fixed;right:14px;bottom:14px;z-index:65;font-family:inherit}
+html.co-man-hoc .hoi-bin{bottom:92px}
+.hoi-bin__nut{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;min-height:46px;border-radius:999px;border:2px solid #2d5fa8;background:#fff;color:#173a70;font-weight:800;font-size:14.5px;box-shadow:0 8px 24px rgba(23,58,112,.16);cursor:pointer}
+.hoi-bin__nut:hover{background:#f2f7ff}
+.hoi-bin__badge{display:inline-flex;align-items:center;justify-content:center;min-width:20px;height:20px;padding:0 6px;border-radius:999px;background:#1f7a44;color:#fff;font-size:12px;font-weight:800}
+
+.hoi-bin__hop{width:min(380px,calc(100vw - 24px));max-height:min(540px,calc(100dvh - 110px));display:flex;flex-direction:column;background:var(--card,#fff);border:1.5px solid #bfd4f7;border-radius:18px;box-shadow:0 14px 36px rgba(20,44,82,.22);overflow:hidden}
+.hoi-bin__dau{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:12px 14px;background:#eef5ff;border-bottom:1px solid #d5e3fb}
+.hoi-bin__dau b{color:#173a70;font-size:15px}
+.hoi-bin__dau small{display:block;font-size:12px;color:#4a638f}
+.hoi-bin__dong{border:1px solid #bfd4f7;background:#fff;color:#173a70;border-radius:8px;width:32px;height:32px;min-height:0;padding:0;font-weight:800;cursor:pointer}
+
+.hoi-bin__luong{flex:1;overflow-y:auto;padding:12px;display:grid;gap:10px;background:#fafcff}
+.hoi-bin__chao{margin:0;padding:10px 12px;border-radius:12px;background:#eef5ff;font-size:13.5px;line-height:1.5;color:#1b3b6e}
+.hoi-bin__muc{display:grid;gap:6px}
+.hoi-bin__hs{justify-self:end;max-width:88%;padding:8px 12px;border-radius:14px 14px 4px 14px;background:#2d5fa8;color:#fff;font-size:13.5px;line-height:1.45}
+.hoi-bin__tl{justify-self:start;max-width:92%;padding:9px 12px;border-radius:14px 14px 14px 4px;background:#fff;border:1px solid #d5e3fb;font-size:13.5px;line-height:1.5}
+.hoi-bin__tl--cho{background:#fffaf0;border-color:#f0d799;color:#6c4b00}
+.hoi-bin__nguon{margin:6px 0 0;font-size:11.5px;color:#4a638f;font-style:italic}
+
+.hoi-bin__form{display:flex;gap:8px;align-items:flex-end;padding:10px 12px;border-top:1px solid var(--line,#e2e8f0);background:#fff}
+.hoi-bin__form textarea{flex:1;resize:none;padding:8px 10px;border-radius:10px;border:1px solid var(--line,#cbd5e1);font:inherit;font-size:14px;min-height:42px;max-height:96px}
+.hoi-bin__form button{flex:none;min-height:42px;padding:0 14px;border-radius:10px;font-weight:700}
+.hoi-bin__loi{margin:0;padding:6px 12px;background:#fff2f0;color:#9b1c1c;font-size:12.5px}
+
+@media (max-width:560px){
+  .hoi-bin{right:10px;bottom:10px}
+  html.co-man-hoc .hoi-bin{bottom:86px}
+  .hoi-bin__nut{padding:9px 13px;font-size:13.5px}
+}

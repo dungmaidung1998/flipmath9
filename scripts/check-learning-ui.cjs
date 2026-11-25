@@ -1,0 +1,28 @@
+// Lightweight render regression checks; no database credentials or browser required.
+const fs=require('node:fs');
+const path=require('node:path');
+const assert=require('node:assert/strict');
+const ts=require('typescript');
+const Module=require('node:module');
+const resolve=Module._resolveFilename;
+Module._resolveFilename=function(request,...args){return resolve.call(this,request.startsWith('@/')?path.join(__dirname,'..',request.slice(2)):request,...args);};
+for(const ext of ['.ts','.tsx'])require.extensions[ext]=(mod,file)=>mod._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,file);
+require.extensions['.css']=()=>{};
+const React=require('react');
+const {renderToStaticMarkup}=require('react-dom/server');
+const Quiz=require('../components/Quiz.tsx').default;
+const Stepper=require('../components/PreClassStepper.tsx').default;
+const questions=[1,2,3].map(i=>({question_id:`q${i}`,stem:['AlphaQuestion','BetaQuestion','GammaQuestion'][i-1],level:1,expected_time_sec:20,options:[{option_key:'A',option_text:'One'},{option_key:'B',option_text:'Two'}]}));
+const quiz=renderToStaticMarkup(React.createElement(Quiz,{kuId:'C1-B2-M1',questions}));
+assert(quiz.includes('AlphaQuestion'));
+assert(!quiz.includes('BetaQuestion'));
+assert(!quiz.includes('GammaQuestion'));
+assert(quiz.includes('Quay lại')&&quiz.includes('Tiếp theo'));
+assert(!quiz.includes('Nộp bài</button>'),'submission only appears on review step');
+const stepper=renderToStaticMarkup(React.createElement(Stepper,{hasGame:true,gameNode:React.createElement(React.Fragment,null,React.createElement('p',null,'Game-one-marker'),React.createElement('p',null,'Game-two-marker')),videoNode:React.createElement('p',null,'Video-marker')}));
+assert(stepper.includes('Game-one-marker'));
+assert(!stepper.includes('Game-two-marker'));
+assert(!stepper.includes('Video-marker'));
+const css=fs.readFileSync(path.join(__dirname,'../app/globals.css'),'utf8');
+assert(css.includes('.learning-screen>footer'));
+console.log('PASS: one quiz question, one game, navigation pair, review before submission.');

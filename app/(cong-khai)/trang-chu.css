@@ -1,0 +1,761 @@
+/* ===========================================================================
+   TRANG CHỦ GIỚI THIỆU VÀ TRANG ĐĂNG NHẬP
+   ---------------------------------------------------------------------------
+   Tệp riêng, cố ý không trộn vào globals.css. Hai lý do:
+
+   1. Phần vỏ ứng dụng và trang giới thiệu có hai ngôn ngữ thị giác khác nhau —
+      một bên gọn và dày đặc thông tin, một bên thoáng và chữ lớn. Trộn chung
+      một tệp là hai bên kéo nhau.
+   2. Tệp này chỉ nạp cho nhánh (cong-khai). Người đang học không phải tải nó.
+
+   Cỡ chữ ở đây theo thang đã chốt: nền 16px, KHÔNG viết hoa toàn bộ. Chữ IN HOA
+   làm hỏng tiếng Việt ở cỡ nhỏ — mất hình dáng từ, và dấu chồng lên dòng trên.
+   =========================================================================== */
+
+.tc {
+  --tc-nen: #f6f8fe;
+  --tc-the: #ffffff;
+  --tc-vien: #dce3f3;
+  --tc-chu: #182345;
+  --tc-mo: #4f5b80;
+  --tc-xanh: #2b4ba8;
+  --tc-xanh-dam: #182345;
+  --tc-nhan: #e09a20;
+  --tc-bong: 0 10px 30px rgba(32, 64, 112, .08);
+
+  background: var(--tc-nen);
+  color: var(--tc-chu);
+  font-size: 16px;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+@media (prefers-color-scheme: dark) and (max-width: 0px) {
+  .tc {
+    --tc-nen: #121726;
+    --tc-the: #1b2234;
+    --tc-vien: #2c3550;
+    --tc-chu: #e9edf8;
+    --tc-mo: #a3aec9;
+    --tc-xanh: #8fb0ff;
+    --tc-xanh-dam: #c9d6ff;
+    --tc-nhan: #e0b64a;
+    --tc-bong: 0 10px 30px rgba(0, 0, 0, .3);
+  }
+}
+
+.tc h1, .tc h2, .tc h3 {
+  text-transform: none;
+  letter-spacing: -.02em;
+  color: var(--tc-xanh-dam);
+}
+
+/* ------------------------------------------------------------ thanh trên cùng */
+
+.tc-dau {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 18px 20px;
+}
+
+.tc-hieu {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--tc-xanh-dam);
+}
+
+.tc-dau nav {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* 44px là ngưỡng vùng chạm tối thiểu. Thanh điều hướng của phần ứng dụng đang
+   ở 38px; ở đây làm đúng ngay từ đầu. */
+.tc-dau nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 9px;
+  color: var(--tc-xanh);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tc-dau nav a:hover { background: rgba(37, 99, 217, .09); text-decoration: none; }
+
+.tc-nut-nho {
+  background: var(--tc-xanh);
+  color: #fff !important;
+}
+.tc-nut-nho:hover { opacity: .9; background: var(--tc-xanh) !important; }
+
+/* ------------------------------------------------------------------- hero */
+
+.tc-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 360px;
+  grid-template-areas: 'chu vao' 'anh vao';
+  gap: 24px 40px;
+  align-items: start;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 24px 20px 56px;
+}
+
+.tc-hero-chu { grid-area: chu; }
+.tc-hero-anh { grid-area: anh; }
+.tc-hero-vao { grid-area: vao; }
+
+.tc-hero h1 {
+  /* Câu này là toàn bộ lập luận của dự án nén vào một dòng. Nó được phép to. */
+  font-size: clamp(30px, 4.6vw, 46px);
+  line-height: 1.15;
+  margin: 8px 0 12px;
+}
+
+.tc-dan {
+  font-size: clamp(18px, 2.2vw, 22px);
+  font-weight: 600;
+  color: var(--tc-nhan);
+  margin: 0 0 18px;
+}
+
+.tc-than {
+  font-size: 17px;
+  color: var(--tc-mo);
+  max-width: 54ch;
+  margin: 0;
+}
+
+.tc-hero-anh img {
+  width: 100%;
+  height: auto;
+  max-width: 420px;
+  display: block;
+}
+
+/* ---------------------------------------------------------------- số liệu */
+
+.tc-so-lieu {
+  display: grid;
+  /* auto-fit chứ không khai cứng 4 cột: hàng này có 6 ô, và trang khác có thể
+     có 3 — khai cứng là để thừa ô trống bên phải. */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px 56px;
+}
+
+.tc-so-lieu div {
+  background: var(--tc-the);
+  border: 1px solid var(--tc-vien);
+  border-radius: 14px;
+  padding: 18px 16px;
+  box-shadow: var(--tc-bong);
+}
+
+.tc-so-lieu b {
+  display: block;
+  font-size: 34px;
+  line-height: 1.1;
+  color: var(--tc-xanh-dam);
+  font-variant-numeric: tabular-nums;
+}
+
+.tc-so-lieu span {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: var(--tc-mo);
+}
+
+/* -------------------------------------------------------------- khối chung */
+
+.tc-khoi {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 20px 64px;
+}
+
+.tc-khoi h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  margin: 0 0 8px;
+}
+
+.tc-khoi h3 {
+  font-size: 19px;
+  margin: 0 0 10px;
+}
+
+.tc-phu {
+  font-size: 17px;
+  color: var(--tc-mo);
+  margin: 0 0 26px;
+  max-width: 68ch;
+}
+
+.tc-mo {
+  display: block;
+  font-size: 15px;
+  color: var(--tc-mo);
+}
+
+/* ------------------------------------------------------- vòng lặp thích ứng */
+
+.tc-vong {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+  counter-reset: none;
+}
+
+.tc-vong li {
+  position: relative;
+  background: var(--tc-the);
+  border: 1px solid var(--tc-vien);
+  border-radius: 14px;
+  padding: 18px 18px 18px 58px;
+  box-shadow: var(--tc-bong);
+}
+
+.tc-so-buoc {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--tc-xanh);
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.tc-vong strong { display: block; margin-bottom: 4px; font-size: 16px; }
+
+.tc-vong-dong {
+  margin: 16px 0 0;
+  font-weight: 600;
+  color: var(--tc-xanh);
+}
+
+/* --------------------------------------------------------- chuỗi chẩn đoán */
+
+.tc-chuoi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 14px;
+}
+
+.tc-chuoi-o {
+  position: relative;
+  background: var(--tc-the);
+  border: 1px solid var(--tc-vien);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: var(--tc-bong);
+}
+
+.tc-chuoi-so {
+  display: inline-block;
+  margin-bottom: 8px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--tc-nhan);
+  font-variant-numeric: tabular-nums;
+}
+
+.tc-chuoi-o strong { display: block; margin-bottom: 6px; }
+
+.tc-mui-ten {
+  position: absolute;
+  right: -13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: var(--tc-xanh);
+  z-index: 1;
+}
+
+/* Khi các ô xuống thành một cột thì mũi tên phải quay xuống, không chỉ ngang. */
+@media (max-width: 660px) {
+  .tc-mui-ten {
+    right: auto;
+    left: 50%;
+    top: auto;
+    bottom: -20px;
+    transform: translateX(-50%) rotate(90deg);
+  }
+  .tc-chuoi { gap: 26px; }
+}
+
+/* ----------------------------------------------------------- bảng quy tắc */
+
+.tc-bang {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--tc-the);
+  border: 1px solid var(--tc-vien);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: var(--tc-bong);
+}
+
+.tc-bang th,
+.tc-bang td {
+  text-align: left;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--tc-vien);
+  font-size: 16px;
+}
+
+.tc-bang tr:last-child th,
+.tc-bang tr:last-child td { border-bottom: 0; }
+
+.tc-bang th {
+  width: 72px;
+  font-weight: 700;
+  color: var(--tc-xanh);
+  font-variant-numeric: tabular-nums;
+  /* globals.css đặt th là 11,5px IN HOA. Ở đây mã quy tắc phải đọc được. */
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* R01 là quy tắc mang tính mới của dự án — được phép nổi hơn bảy dòng kia. */
+.tc-bang .tc-nhan td,
+.tc-bang .tc-nhan th {
+  background: rgba(224, 154, 32, .1);
+  font-weight: 600;
+}
+
+/* ----------------------------------------------------------------- đo gì */
+
+.tc-doi {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.tc-doi > div {
+  background: var(--tc-the);
+  border: 1px solid var(--tc-vien);
+  border-radius: 14px;
+  padding: 22px;
+  box-shadow: var(--tc-bong);
+}
+
+.tc-les {
+  list-style: none;
+  margin: 0 0 14px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tc-les li {
+  border: 1px solid var(--tc-vien);
+  border-radius: 20px;
+  padding: 5px 13px;
+  font-size: 15px;
+  color: var(--tc-mo);
+}
+
+.tc-les b { color: var(--tc-xanh-dam); font-variant-numeric: tabular-nums; }
+
+.tc-nguyen-tac {
+  margin: 14px 0 0;
+  padding-left: 14px;
+  border-left: 3px solid var(--tc-nhan);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--tc-chu);
+}
+
+.tc-gv {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--tc-mo);
+  max-width: 68ch;
+}
+
+.tc-anh-gv { margin: 26px 0 0; }
+.tc-anh-gv img { width: 100%; height: auto; border-radius: 14px; border: 1px solid var(--tc-vien); }
+.tc-anh-gv figcaption { margin-top: 10px; font-size: 14px; color: var(--tc-mo); }
+
+/* ------------------------------------------------------------------- chân */
+
+.tc-chan {
+  border-top: 1px solid var(--tc-vien);
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 28px 20px 64px;
+  font-size: 15px;
+  color: var(--tc-mo);
+}
+
+.tc-chan p { margin: 0 0 6px; }
+.tc-chan strong { color: var(--tc-chu); }
+.tc-trang-thai { font-style: italic; }
+
+/* ===================================================== thẻ đăng nhập dùng chung */
+
+.the-dang-nhap {
+  background: var(--tc-the, #fff);
+  border: 1px solid var(--tc-vien, #dbe6f5);
+  border-radius: 22px;
+  padding: 24px;
+  box-shadow: var(--tc-bong, 0 10px 30px rgba(32, 64, 112, .08));
+}
+
+.the-dang-nhap h2 {
+  font-family: var(--font-display);
+  font-size: 26px;
+  text-transform: none;
+  letter-spacing: -.02em;
+  margin: 0 0 16px;
+  color: var(--tc-xanh-dam, #173b78);
+}
+
+/* globals.css đặt label 12px IN HOA. Trong thẻ này thì không — người đang gõ
+   mã cần đọc được nhãn ô. */
+.the-dang-nhap label {
+  font-size: 14px;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--tc-mo, #55657a);
+  margin: 12px 0 5px;
+}
+
+.the-dang-nhap input,
+.the-dang-nhap select.dn-truong { width: 100%; font-size: 16px; padding: 11px 13px; border-radius: 10px; border: 1px solid var(--tc-vien, #dbe6f5); background: var(--field, #fff); color: var(--tc-chu, #182345); }
+.dn-nhan-vai { display: block; }
+
+.chon-vai-tro {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+/* Vai trò quyết định thẻ này có mấy ô, nên nó phải nằm TRƯỚC các ô — và phải
+   nhìn là biết đang chọn cái nào. */
+.chon-vai-tro button {
+  min-height: 46px;
+  width: 100%;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.chon-vai-tro button[aria-pressed='true'] {
+  background: var(--tc-xanh, #2563d9);
+  border-color: var(--tc-xanh, #2563d9);
+  color: #fff;
+}
+
+.o-mat-khau { display: flex; gap: 8px; align-items: stretch; }
+.o-mat-khau input { flex: 1; min-width: 0; }
+.o-mat-khau button { flex: 0 0 auto; min-height: 44px; font-size: 15px; padding: 0 14px; }
+
+.nut-vao { width: 100%; margin-top: 18px; min-height: 50px; font-size: 16px; border-radius: 999px; background: #cf2e26 !important; border-color: #cf2e26 !important; box-shadow: 0 2px 0 #a11f19; }
+.nut-vao:hover:not(:disabled) { background: #b8261f !important; }
+
+.the-dang-nhap .err { font-size: 15px; }
+.the-dang-nhap .err details { margin-top: 6px; }
+.the-dang-nhap .err summary { cursor: pointer; font-size: 13.5px; font-weight: 600; }
+.the-dang-nhap .err code { display: block; margin-top: 5px; font-size: 13px; word-break: break-word; }
+
+.the-dang-nhap .hint { font-size: 14px; margin: 16px 0 0; }
+
+/* trang /dang-nhap riêng */
+.khung-dang-nhap {
+  max-width: 440px;
+  margin: 0 auto;
+  padding: 32px 20px 64px;
+  text-align: center;
+}
+.khung-dang-nhap .the-dang-nhap { text-align: left; }
+.dn-hieu { display: inline-block; font: 800 34px/1 var(--font-display); color: var(--navy-d); text-decoration: none; }
+.dn-hieu span { color: #cf2e26; }
+.dn-hieu:hover { text-decoration: none; }
+.dn-hieu:focus-visible, .dn-ve a:focus-visible { outline: 3px solid #cf2e26; outline-offset: 3px; border-radius: 6px; }
+.dn-hinh { display: block; width: min(260px, 70%); height: auto; margin: 6px auto -6px; }
+.dn-ve { margin: 18px 0 0; font-size: 14px; }
+
+.ten-he-thong {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+/* ======================================================= màn hình hẹp dần */
+
+/* Thẻ đăng nhập rời khỏi cột riêng, nhưng vẫn phải nằm TRƯỚC ảnh: học sinh vào
+   đây là để đăng nhập, không phải để ngắm hình. */
+@media (max-width: 1000px) {
+  .tc-hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: 'chu' 'vao' 'anh';
+    gap: 28px;
+  }
+  .tc-hero-vao { max-width: 440px; }
+  .tc-hero-anh img { margin: 0 auto; max-width: 340px; }
+}
+
+@media (max-width: 560px) {
+  .tc-so-lieu b { font-size: 30px; }
+  .tc-khoi, .tc-so-lieu, .tc-hero, .tc-dau, .tc-chan { padding-left: 16px; padding-right: 16px; }
+  .tc-hero-anh img { max-width: 260px; }
+  .tc-vong li { padding: 16px 16px 16px 54px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tc * { transition: none !important; animation: none !important; }
+}
+
+/* ===========================================================================
+   ẢNH MINH HOẠ
+   ---------------------------------------------------------------------------
+   Mọi khối dưới đây chỉ hiện khi tệp ảnh tồn tại (xem lib/anh.ts). Thiếu ảnh
+   thì trang vẫn đủ nghĩa, không có biểu tượng ảnh vỡ.
+
+   Tỉ lệ khung được khai sẵn bằng aspect-ratio để chỗ đặt ảnh giữ đúng chiều
+   cao ngay từ lúc tải — không có cú nhảy layout khi ảnh về.
+   =========================================================================== */
+
+.tc-hero-anh { display: block; }
+.tc-hero-anh img { margin: 0 auto; }
+
+/* ---- hero có ảnh nền: chỉ trên màn rộng ---------------------------------- */
+
+@media (min-width: 1000px) {
+  .tc-hero.co-nen {
+    grid-template-areas: 'chu vao';
+    align-items: center;
+    min-height: 430px;
+    padding-top: 44px;
+    padding-bottom: 76px;
+  }
+
+  .tc-hero.co-nen .tc-hero-anh {
+    position: absolute;
+    inset: 20px;
+    z-index: 0;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  .tc-hero.co-nen .tc-hero-anh img {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  /* Lớp phủ trắng mờ dần ở nửa trái. Chữ tiêu đề nằm trên đó, và ảnh nền có
+     thể bị thay bằng tấm khác đậm hơn bất cứ lúc nào — lớp phủ này bảo đảm
+     chữ vẫn đọc được mà không phải đo lại độ tương phản mỗi lần đổi ảnh. */
+  .tc-hero.co-nen .tc-hero-anh::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg,
+      rgba(255, 255, 255, .92) 0%,
+      rgba(255, 255, 255, .72) 34%,
+      rgba(255, 255, 255, 0) 58%);
+  }
+
+  .tc-hero.co-nen .tc-hero-chu,
+  .tc-hero.co-nen .tc-hero-vao { position: relative; z-index: 1; }
+}
+
+/* Ảnh hero là tranh nền sáng. Ở chế độ tối thì phủ tối lại, không phủ trắng —
+   phủ trắng trên nền tối làm chữ sáng biến mất. */
+@media (prefers-color-scheme: dark) and (max-width: 0px) and (min-width: 1000px) {
+  .tc-hero.co-nen .tc-hero-anh::after {
+    background: linear-gradient(100deg,
+      rgba(16, 21, 27, .93) 0%,
+      rgba(16, 21, 27, .76) 34%,
+      rgba(16, 21, 27, .12) 58%);
+  }
+}
+
+/* ---- biểu tượng trong thẻ số liệu ---------------------------------------- */
+
+/* Ảnh nằm cạnh CON SỐ chứ không cạnh nhãn: hàng số còn chỗ trống, còn nhãn
+   thì cần trọn bề ngang. Đặt ảnh cạnh nhãn là ép nhãn xuống thêm một dòng. */
+.tc-so-lieu div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: 'so anh' 'nhan nhan';
+  align-items: start;
+  column-gap: 10px;
+}
+
+.tc-so-lieu b { grid-area: so; align-self: center; }
+.tc-so-lieu span { grid-area: nhan; }
+
+.tc-so-lieu-anh {
+  grid-area: anh;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-top: -4px;
+}
+
+@media (min-width: 900px) {
+  .tc-so-lieu-anh { width: 72px; height: 72px; }
+}
+
+/* ---- sơ đồ vòng lặp ------------------------------------------------------ */
+
+.tc-vong-anh { margin: 0 0 8px; display: none; }
+
+.tc-vong-anh img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+}
+
+@media (min-width: 900px) {
+  .tc-vong-anh { display: block; }
+
+  /* Có ảnh sơ đồ thì sáu thẻ chữ không hiện nữa — NHƯNG không dùng
+     display:none. display:none xoá luôn khỏi cây trợ năng, và người dùng
+     trình đọc màn hình sẽ chỉ còn mỗi câu mô tả ảnh. Cách dưới đây giấu khỏi
+     mắt nhưng vẫn đọc được, nên nội dung sáu bước không mất với ai cả. */
+  .tc-vong.co-anh,
+  .tc-vong-dong.co-anh {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    border: 0;
+  }
+}
+
+/* ---- ảnh minh hoạ các khối phía dưới ------------------------------------- */
+
+.tc-minh-hoa {
+  margin: 0 0 26px;
+  max-width: 900px;
+}
+
+.tc-minh-hoa img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  border: 1px solid var(--tc-vien);
+  background: var(--tc-the);
+}
+
+.tc-minh-hoa figcaption {
+  margin-top: 10px;
+  font-size: 14px;
+  color: var(--tc-mo);
+  font-style: italic;
+}
+
+@media (max-width: 560px) {
+  .tc-so-lieu-anh { width: 54px; height: 54px; }
+}
+
+/* Welcome illustration and live login form occupy separate columns. */
+.tc-hero.tc-hero-welcome{max-width:1440px;grid-template-columns:minmax(0,1fr) minmax(320px,390px);grid-template-areas:none;align-items:center;gap:28px;padding:28px;margin-bottom:40px;border-radius:24px;background:linear-gradient(135deg,#dff2ff,#f0f9ff 65%,#e8f2ff)}
+.tc-hero-welcome .tc-hero-intro{min-width:0}
+.tc-hero-welcome .tc-hero-chu{padding:8px 20px 0}
+.tc-hero-welcome h1{color:#174e85;font-size:clamp(32px,3.8vw,54px);margin-top:0}
+.tc-hero-welcome h1 span{color:#df8024}
+.tc-hero-welcome .tc-than{color:#294866;max-width:58ch}
+.tc-hero-welcome .tc-hero-anh{position:static;display:block;margin-top:18px;border-radius:20px;overflow:hidden}
+.tc-hero-welcome .tc-hero-anh img{display:block;width:100%;max-width:none;height:auto;margin:0}
+.tc-hero-welcome .tc-hero-vao{grid-area:auto;min-width:0;width:100%;max-width:none;scroll-margin-top:20px}
+.tc-hero-steps{display:flex;flex-wrap:wrap;gap:18px 28px;list-style:none;padding:0;margin:22px 0 0;color:#174e85;font-weight:600}
+.tc-hero-steps li{display:flex;align-items:center;gap:8px}
+.tc-hero-steps li>span{font-size:24px}
+@media(max-width:900px){.tc-hero.tc-hero-welcome{grid-template-columns:minmax(0,1fr);padding:22px 16px;border-radius:0}.tc-hero-welcome .tc-hero-vao{max-width:480px;justify-self:center}.tc-hero-welcome .tc-hero-chu{padding:0}.tc-hero-welcome .tc-hero-anh img{max-width:none}.tc-hero-steps{gap:12px 18px}}
+
+/* Full-width artwork behind live text and the real login form. */
+.tc-hero.tc-hero-overlay{position:relative;isolation:isolate;overflow:hidden;grid-template-columns:minmax(0,1fr) minmax(300px,350px);min-height:620px;padding:32px;gap:24px}
+.tc-hero-overlay .tc-hero-intro{align-self:start;padding-top:22px}
+.tc-hero-overlay .tc-hero-anh{position:absolute;inset:0;z-index:-2;margin:0;border-radius:0}
+.tc-hero-overlay .tc-hero-anh img{width:100%;height:100%;max-width:none;object-fit:cover;object-position:50% center}
+.tc-hero-overlay::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,rgba(230,245,255,.96) 0%,rgba(230,245,255,.90) 23%,rgba(230,245,255,.20) 43%,transparent 57%)}
+.tc-hero-overlay .tc-hero-chu{padding:0;max-width:360px}
+.tc-hero-overlay h1{font-size:clamp(32px,3.3vw,48px);line-height:1.15}
+.tc-hero-overlay .tc-than{font-size:17px;line-height:1.65}
+.tc-hero-overlay .tc-hero-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px;font-size:14px}
+.tc-hero-overlay .tc-hero-steps li{flex-direction:column;text-align:center;gap:6px}
+.tc-hero-overlay .tc-hero-vao{position:relative;z-index:1}
+.tc-hero-overlay .the-dang-nhap{background:rgba(255,255,255,.96);color:#294866;border-color:#dbe6f5;box-shadow:0 12px 36px #174e8518}
+.tc-hero-overlay .the-dang-nhap h2{color:#174e85}
+.tc-hero-overlay .the-dang-nhap .hint{color:#55657a}
+@media(min-width:901px) and (max-width:1150px){.tc-hero.tc-hero-overlay{padding:24px;grid-template-columns:minmax(0,1fr) 320px}.tc-hero-overlay .tc-hero-chu{max-width:280px}.tc-hero-overlay .tc-than{font-size:16px}}
+@media(max-width:900px){.tc-hero.tc-hero-overlay{grid-template-columns:minmax(0,1fr);padding:24px 18px;min-height:0;gap:28px}.tc-hero-overlay .tc-hero-intro{padding-top:0;padding-bottom:220px}.tc-hero-overlay .tc-hero-chu{max-width:540px}.tc-hero-overlay .tc-hero-anh img{object-fit:cover;object-position:50% top}.tc-hero-overlay::before{background:linear-gradient(180deg,rgba(230,245,255,.97),rgba(230,245,255,.90) 23%,rgba(230,245,255,.12) 48%,rgba(230,245,255,.8) 75%)}.tc-hero-overlay .tc-hero-steps{max-width:360px}.tc-hero-overlay .tc-hero-anh{bottom:auto;height:650px}.tc-hero-overlay .tc-hero-anh img{object-fit:cover}.tc-hero-overlay .tc-hero-vao{width:100%;max-width:480px}}
+
+/* Keep artwork in the hero's own layer; no tint over the illustration. */
+.tc-hero-overlay::before{content:none;display:none}
+.tc-hero-overlay>.tc-hero-anh{grid-area:auto;position:absolute;inset:0;z-index:0;pointer-events:none}
+.tc-hero-overlay>.tc-hero-intro{position:relative;z-index:1;background:transparent}
+.tc-hero-overlay .tc-hero-chu{background:transparent}
+
+/* Statistics: number and icon share the top row; label spans the whole card. */
+.tc-so-lieu div{grid-template-areas:'so anh' 'nhan nhan';grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:8px;row-gap:6px}
+.tc-so-lieu b{align-self:center}
+.tc-so-lieu span{margin-top:0;font-size:17px;font-weight:700;line-height:1.35;color:var(--tc-xanh-dam);align-self:start}
+.tc-so-lieu-anh{align-self:center;width:72px;height:72px;margin-top:0}
+@media(min-width:900px){.tc-so-lieu-anh{width:80px;height:80px}}
+
+/* Section illustrations preserve their full content at every viewport width. */
+.tc-minh-hoa{max-width:none;width:100%}
+.tc-minh-hoa a{display:block;border-radius:16px}
+.tc-minh-hoa a:focus-visible{outline:3px solid var(--tc-xanh);outline-offset:5px}
+.tc-minh-hoa img{height:auto;object-fit:contain}
+
+/* 26/10 · tối ưu UI trang chủ */
+.tc-hero-overlay .tc-hero-chu{max-width:430px}
+.tc-hero-overlay::before{background:linear-gradient(90deg,rgba(230,245,255,.97) 0%,rgba(230,245,255,.93) 32%,rgba(230,245,255,.35) 48%,transparent 62%)}
+.tc-hero-overlay .tc-hero-steps{grid-template-columns:repeat(5,1fr);max-width:430px}
+@media(max-width:900px){
+  .tc-hero.tc-hero-overlay{display:flex;flex-direction:column;min-height:0;padding:20px 16px;gap:18px}
+  .tc-hero-overlay::before{display:none}
+  .tc-hero-overlay .tc-hero-anh{position:relative;inset:auto;z-index:auto;order:-1;height:220px;border-radius:16px;overflow:hidden}
+  .tc-hero-overlay .tc-hero-anh img{object-position:55% 30%}
+  .tc-hero-overlay .tc-hero-chu{max-width:none}
+  .tc-hero-overlay .tc-hero-intro{padding:0}
+  .tc-hero-overlay .tc-hero-anh{height:220px !important}
+  .tc-hero-overlay .tc-hero-steps{max-width:none}
+  .tc-hero-overlay .tc-hero-vao{align-self:center}
+  .tc-hero-overlay .tc-hero-steps{grid-template-columns:repeat(5,minmax(0,1fr));font-size:12.5px}
+}
+@media(max-width:560px){.tc-dau nav a[href^="#"]:not(.tc-nut-nho){display:none}}
+/* Hành trình 5 bước có nền riêng để không lẫn vào tranh nền ở màn rộng */
+@media(min-width:901px){.tc-hero-overlay .tc-hero-steps{background:rgba(255,255,255,.88);border:1px solid #dbe7f5;border-radius:14px;padding:12px 10px;box-shadow:0 6px 18px rgba(23,78,133,.08)}}

@@ -1,0 +1,41 @@
+/* MỤC ĐÍCH: Bố cục SVG minh hoạ cảnh địa danh Đà Nẵng tỷ lệ 3:2. */
+.canh-svg{display:block;width:100%;height:auto;aspect-ratio:3/2;overflow:hidden}
+.anh-minh-hoa__nut .canh-svg{border-radius:14px;border:1px solid var(--line)}
+.anh-to .canh-svg{width:min(100%,1100px,calc((100dvh - 90px)*1.5));height:auto;border-radius:12px}
+.canh-may{animation:canh-may 18s ease-in-out alternate infinite}
+.canh-troi,.canh-sao,.canh-hoa,.canh-nguoi{transform-box:fill-box;transform-origin:center}
+.canh-troi{animation:canh-quay 24s linear infinite}
+.canh-sao{animation:canh-sao 1.4s ease-in-out infinite}
+.canh-hoa,.canh-nguoi{transform-origin:50% 100%;animation:canh-lac 2.6s ease-in-out alternate infinite}
+.canh-nguoi{animation-duration:3.4s}
+.canh-vay{animation:canh-vay 2.4s ease-in-out infinite}
+.canh-quay{animation:canh-quay 1.5s linear infinite}
+.canh-quay-tay{transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.canh-rung{animation:canh-rung .28s ease-in-out alternate infinite}
+.canh-gio path{animation:canh-gio .6s ease-in-out infinite}
+.canh-gio path:nth-child(2){animation-delay:.2s}
+.canh-gio path:nth-child(3){animation-delay:.4s}
+.canh-chay{animation:canh-chay .62s linear infinite}
+.canh-muc{animation:canh-muc 7s ease-in-out alternate infinite}
+.canh-song{animation:canh-song 3s ease-in-out alternate infinite}
+.canh-nhap,.canh-den{animation:canh-nhap 2.6s ease-in-out alternate infinite}
+.canh-am{animation:canh-am 2.4s ease-out infinite}
+.canh-dieu,.canh-quat{animation:canh-lac 2.4s ease-in-out alternate infinite}
+.canh-quet{animation:canh-quet 4.2s ease-in-out alternate infinite}
+.canh-kim{animation:canh-kim 1.5s steps(3) alternate infinite}
+@keyframes canh-may{to{transform:translateX(38px)}}
+@keyframes canh-quay{to{transform:rotate(360deg)}}
+@keyframes canh-sao{50%{transform:scale(1.15) rotate(7deg)}}
+@keyframes canh-rung{to{transform:translateY(-1.7px)}}
+@keyframes canh-gio{0%,100%{opacity:.15}50%{opacity:.86}}
+@keyframes canh-chay{to{stroke-dashoffset:-28}}
+@keyframes canh-muc{to{transform:translateY(-16px)}}
+@keyframes canh-song{to{transform:translateX(18px)}}
+@keyframes canh-lac{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+@keyframes canh-quet{from{transform:rotate(-45deg)}to{transform:rotate(45deg)}}
+@keyframes canh-vay{0%,100%{transform:rotate(0)}50%{transform:rotate(-16deg)}}
+@keyframes canh-kim{from{transform:rotate(-1deg)}to{transform:rotate(1deg)}}
+@keyframes canh-nhap{from{opacity:.52}to{opacity:1}}
+@keyframes canh-am{from{opacity:.7;transform:scale(.85)}to{opacity:.1;transform:scale(1.13)}}
+@media(prefers-reduced-motion:reduce){.canh-svg *,.nan-hoa svg *{animation:none!important;transition:none!important}}
+

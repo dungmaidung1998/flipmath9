@@ -1,0 +1,18 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),ts=require('typescript'),Module=require('node:module');
+const resolve=Module._resolveFilename;
+Module._resolveFilename=function(request,...args){return resolve.call(this,request.startsWith('@/')?path.join(__dirname,'..',request.slice(2)):request,...args);};
+for(const ext of ['.ts','.tsx'])require.extensions[ext]=(mod,file)=>mod._compile(ts.transpileModule(fs.readFileSync(file,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022,esModuleInterop:true}}).outputText,file);
+require.extensions['.css']=()=>{};
+const React=require('react'),{renderToStaticMarkup:render}=require('react-dom/server');
+const Gain=require('../components/InterventionGainTracker.tsx').default;
+const Errors=require('../components/ClassErrorBreakdown.tsx').default;
+const negative=render(React.createElement(Gain,{effects:[{rule:'R04',ruleLabel:'Cần kiểm tra',issued:3,done:1,pre:4,post:0,gain:-4}]}));
+assert(negative.includes('-4.00'));
+assert(!negative.includes('+-4'));
+assert(!negative.includes('Effect Size'));
+assert(negative.includes('Điểm trước 4, điểm sau 0'));
+const empty=render(React.createElement(Gain,{effects:[]}));assert(!empty.includes('NaN'));assert(empty.includes('Chưa đủ dữ liệu'));
+const failed=render(React.createElement(Gain,{effects:[],loadError:true}));assert(failed.includes('Không tải được'));
+const zero=render(React.createElement(Errors,{errors:[],kuId:'C1',totalQuizTakers:0}));
+assert(zero.includes('Chưa ghi nhận lỗi'));assert(!zero.includes('Giảm 86%'));assert(!zero.includes('LỖI GỐC NỀN TẢNG'));
+console.log('PASS: negative gain, zero score, missing results, fetch failure, no automatic root diagnosis.');

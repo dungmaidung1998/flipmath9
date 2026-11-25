@@ -1,0 +1,19 @@
+lop-hoc-nam-nu | Lớp học có học sinh nam và nữ | C1-B1-M3-Q16, C1-B3-M1-Q02, C1-OTC-Q03
+ca-no-song-han | Ca nô chạy trên sông Hàn | C1-B3-M1B-Q02, C1-B3-M1B-Q04, C1-B3-M1B-Q08, C1-B3-M1B-Q09, C1-B3-M1B-Q12, C1-B3-M1B-Q15, C1-OTC-Q08
+di-duong-som-muon | Đi đường sớm hoặc muộn | C1-B3-M1B-Q16
+mua-but-va-vo | Quầy bút và vở | C1-OTC-Q05, C1-OTC-Q06
+hai-voi-cung-chay | Hai vòi cùng chảy vào bể | C1-OTC-Q09
+ve-khu-vui-choi | Vé khu vui chơi | C2-OTC-Q08
+khoi-go-lap-phuong | Khối gỗ lập phương | C3-B10-M1-Q07, C3-OTC-Q10
+tam-kinh-hinh-vuong | Tấm kính vuông | C3-B7-M1-Q16
+may-tinh-cam-tay | Máy tính cầm tay | C4-B12-M3-Q04, C4-B12-M3-Q12
+thang-tua-tuong | Thang dựa tường | C4-LTC-Q07
+bin-tha-dieu | Bin thả diều | C4-OTC-Q08
+bong-cot-dien | Bóng cột điện | C4-OTC-Q09
+hai-vong-tron-chong | Hai vòng tròn chồng một phần | C5-B17-M1-Q07
+hai-banh-rang-an-khop | Hai bánh răng ăn khớp | C5-B17-M1-Q15
+hai-dong-xu-tiep-xuc | Hai đồng xu tiếp xúc ngoài | C5-B17-M2-Q16
+banh-xe-dap-lan | Bánh xe đạp lăn | C5-OTC-Q08
+5a-2 | Bố và con (public/chu-de/de) | 5a-2
+5a-3 | Hai anh em (public/chu-de/de) | 5a-3
+5a-4 | Hai bạn đố số (public/chu-de/de) | 5a-4

@@ -1,0 +1,70 @@
+/* MỤC ĐÍCH: Khung hiển thị phòng học sinh và thẻ hoạt động thu gọn trên di động. */
+.ph-hs {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.ph-the {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  border: 2px solid var(--ph-mau, #2d5fa8);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.08);
+}
+
+.ph-dau {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  color: #334155;
+  font-size: 14px;
+}
+
+.ph-luoi4 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.ph-nut {
+  min-height: 136px;
+  border: 0;
+  border-radius: 18px;
+  color: #ffffff;
+  font-size: 32px;
+  font-weight: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  cursor: pointer;
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.18);
+  transition: transform 0.1s ease, opacity 0.15s ease;
+}
+
+.ph-nut:active:not(:disabled) {
+  transform: translateY(3px);
+}
+
+.ph-nut[data-nhan='A'] { background: #dc2626; }
+.ph-nut[data-nhan='B'] { background: #2563eb; }
+.ph-nut[data-nhan='C'] { background: #d97706; }
+.ph-nut[data-nhan='D'] { background: #16a34a; }
+
+.ph-nut.chon {
+  outline: 4px solid #111827;
+}
+
+.ph-nut.mo {
+  opacity: 0.4;
+}
+
+.ph-nut small {
+  font-size: 18px;
+  opacity: 0.9;
+}

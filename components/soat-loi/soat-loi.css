@@ -1,0 +1,65 @@
+/* Soát lỗi cũ + sổ lỗi */
+.sl{max-width:760px;margin-left:auto;margin-right:auto}
+.sl-trong{text-align:center}.sl-trong img{height:140px;width:auto}
+.sl-dau{display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;margin:0 0 10px}
+.sl-dau small{color:var(--muted)}
+.sl-the{display:inline-block;padding:3px 12px;border-radius:999px;background:#fde7e5;color:#8f1d16;font-weight:800;font-size:13px}
+.sl-cau{border:0;padding:0;margin:0;min-width:0}
+.sl-pa{display:grid;gap:10px;margin:10px 0}
+.sl-nut{display:flex;justify-content:space-between;gap:10px;margin-top:12px}
+.sl-ma{list-style:none;margin:10px 0;padding:0;display:grid;gap:10px}
+.sl-ma li{padding:10px 14px;border-radius:12px;border:1px solid var(--line);line-height:1.55}
+.sl-ma li p{margin:0 0 4px}
+.sl-ma--da-khac-phuc{background:#f1fbf4}.sl-ma--dang-sua{background:#fffaf0}.sl-ma--con-mac{background:#fff3f1}
+.sl-chua summary{cursor:pointer;font-weight:700}
+.sl-chua ol{padding-left:22px;display:grid;gap:8px}
+.sl-chua li.sai{color:#6b2a00}
+.sl-chua p{margin:0 0 4px;line-height:1.55}
+.so-loi-ds{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.so-loi-ds li{display:grid;gap:4px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card);line-height:1.55}
+.so-loi-ds p{margin:0}
+.so-loi-tt{display:inline-flex;align-items:center;gap:4px;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:700;justify-self:start}
+.on-loi-hom-nay{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between;border:2px solid #f6c9c4;background:#fff7f6}
+.on-loi-hom-nay p{margin:0}
+.tu-danh-gia{max-width:640px;margin:16px auto}
+.tu-danh-gia__sao{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 12px}
+.wrap .tu-danh-gia__sao button{min-height:48px;padding:6px 14px;border-radius:12px}
+.wrap .tu-danh-gia__sao button[aria-pressed="true"]{background:#fff3c4;border-color:#e8b52a}
+/* Kiến thức nền */
+.on-nhanh{margin:12px 0;padding:12px 16px;border-radius:14px;background:#fff8dc;border:2px solid #f4e2a1;text-align:left;line-height:1.6}
+.on-nhanh p{margin:0 0 6px}
+.on-nhanh__dau{font-weight:600}
+.on-nhanh__muc{margin:0 0 8px}
+.on-nhanh__nhan{margin:0 0 2px!important}
+.on-nhanh__nd{margin:0;min-width:0;max-width:100%}
+.nen-ds{list-style:none;margin:12px 0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.nen-the{display:grid;gap:4px;align-content:start;padding:12px 14px;border-radius:14px;border:1px solid var(--line);background:var(--card)}
+.nen-the--hong{border-color:#f3b4ae}
+.nen-the p{margin:0}
+.nen-ten small{color:var(--muted)}
+.nen-muc{justify-self:start;display:inline-flex;gap:4px;padding:2px 10px;border-radius:999px;font-size:13px;font-weight:700}
+.mat-goc td.o{text-align:center;font-size:15px}
+.mat-goc .canh{padding:10px 14px;border-radius:12px;background:#fff3f1;border:1px solid #f3b4ae;margin:0 0 10px}
+
+/* Lịch bài học của học sinh */
+.lich-hs ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.lich-hs li{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:center;line-height:1.5}
+.lich-hs li small{flex-basis:100%;color:var(--muted)}
+.lich-hs__chip{display:inline-flex;gap:4px;padding:2px 10px;border-radius:999px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.bai-dau .lich-hs__chip{margin-left:auto}
+
+/* Rút gọn mã lỗi 24/11/2026 */
+.sl-ma--gon li{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:start;padding:8px 12px}
+.sl-ma--gon .sl-ma__nhan{white-space:nowrap;font-size:.85em;font-weight:700;padding:2px 8px;border-radius:999px;background:#fff;border:1px solid var(--line)}
+.sl-ma--gon .sl-ma__ten{font-weight:600;line-height:1.45}
+.sl-ma__them{grid-column:1/-1;font-size:.92em;color:var(--muted,#555)}
+.sl-ma__them summary{cursor:pointer;color:#2b4fa8;font-size:.9em;margin-top:2px}
+.sl-ma__them[open] summary{margin-bottom:4px}
+
+/* Gợi ý đã duyệt hiện ngay khi học sinh sai lại từ lần 2 */
+.sl-goi-y{grid-column:1/-1;margin-top:6px;padding:10px 12px;border-radius:10px;background:#eef5ff;border:1px solid #bfd4f7;display:grid;gap:6px;font-size:.93em}
+.sl-goi-y__dau{display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:space-between;font-weight:700;color:#1b4587}
+.sl-goi-y__tang{font-size:.82em;font-weight:600;color:#4a638f}
+.sl-goi-y__them summary{cursor:pointer;color:#1b4587;font-weight:600}
+.sl-goi-y__them ul{margin:6px 0 0;padding-left:18px;display:grid;gap:4px}
+.sl-goi-y__minh-bach{margin:0;font-size:.82em;color:#4a638f;font-style:italic}
